@@ -5,7 +5,7 @@
 
 #### 安装教程
 
-修改自己的Hydra.sh文件，将本库地址添加到订阅目录  
+修改自己的diy.sh文件，将本库地址添加到订阅目录  
 https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/
 
 #### 使用说明
@@ -22,7 +22,7 @@ https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/
 4. 保存修改
 
 ##### 方法2 修改git_diy.sh
-1. git clone本项目到Hydrascripts  
+1. git clone本项目到/diyscripts目录  
 git clone https://github.com/Hydrahail-Johnson/diy_scripts.git Hydra  
 注意名字可以自己修改
 2. 在Hydra.sh最后一行添加  
