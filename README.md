@@ -6,7 +6,7 @@
 #### 安装教程
 
 修改自己的diy.sh文件，将本库地址添加到订阅目录  
-https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/js/
+https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/
 
 #### 使用说明
 适用于Docker2教程，需要修改diy.sh或者git_diy.sh文件，二选一，将本库地址添加到订阅目录，方法如下
@@ -14,7 +14,7 @@ https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/js/
 ##### 方法1 修改diy.sh
 1. 在author_list=""添加作者名称，如DIY，可以自定义
 2. 添加本库链接  
-在scripts_base_url_1=https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/js/  
+在scripts_base_url_1=https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/  
 注意url_1中数字为DIY在author_list中顺序数字  
 3. 在my_scripts_list_1=""中添加需要下载的脚本名字，建议全部添加  
 注意list_1中数字为DIY在author_list中顺序数字  
