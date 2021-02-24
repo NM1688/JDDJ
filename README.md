@@ -15,9 +15,9 @@ https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/js/
 1. 在author_list=""添加作者名称，如DIY，可以自定义
 2. 添加本库链接  
 在scripts_base_url_1=https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/js/  
-注意url_1后面数字为DIY在author_list中顺序数字  
+注意url_1中数字为DIY在author_list中顺序数字  
 3. 在my_scripts_list_1=""中添加需要下载的脚本名字，建议全部添加  
-注意list_1后面数字为DIY在author_list中顺序数字  
+注意list_1中数字为DIY在author_list中顺序数字  
 所有顺序做到一一对应
 4. 保存修改
 
