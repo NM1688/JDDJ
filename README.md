@@ -14,6 +14,7 @@
 
 #### 参与贡献
 
-[qiao112](https://github.com/qiao112)
+[qiaoqi](https://github.com/qiao112)
 [ktandykok](https://github.com/ktandykok)
 [XINZHOUZHANG](https://github.com/XINZHOUZHANG)
+[Nanase](https://github.com/jsyzdej)
