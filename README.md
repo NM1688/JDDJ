@@ -1,12 +1,12 @@
 # diy_Scripts
 
 #### 介绍
-本库是用来同步大佬们的自定义js脚本，本人并不做任何脚本修改，保证原作者脚本的原汁原味
+本库是用来同步大佬们的自定义js脚本，本人并不做任何脚本修改，保证原作者脚本的原汁原味  
 
 #### 安装教程
 
-修改自己的diy.sh文件，将本库地址添加到订阅目录
-
+修改自己的diy.sh文件，将本库地址添加到订阅目录  
+https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/js/
 
 #### 使用说明
 
