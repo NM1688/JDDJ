@@ -25,7 +25,7 @@ https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/
 1. git clone本项目到/diyscripts目录  
 git clone https://github.com/Hydrahail-Johnson/diy_scripts.git Hydra  
 注意名字可以自己修改
-2. 在Hydra.sh最后一行添加  
+2. 在diy.sh最后一行添加  
 /bin/bash /jd/scripts/git_diy.sh Hydra
 3. 保存修改
 
