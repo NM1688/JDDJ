@@ -9,9 +9,14 @@
 https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/
 
 #### 使用说明
-适用于Docker2教程，需要修改diy.sh或者git_diy.sh文件，二选一，将本库地址添加到订阅目录，方法如下
+适用于Docker2教程，需要修改diy.sh或者git_diy.sh文件，多选一，将本库地址添加到订阅目录，方法如下
 
-##### 方法1 修改diy.sh
+##### 方法1 修改diy.sh （最简单，适合小白用户）
+1. 从网页上复制diy.sh文件的内容，在web面板中替换自己原有的自定义任务后，保存修改。
+diy.sh下载地址：https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/sh/git.sh
+
+##### 方法2 修改diy.sh （次简单，适合爱折腾用户）
+在web面板修改自定义任务，修改内容如下：
 1. 在author_list=""添加作者名称，如Hydra，可以自定义
 2. 添加本库链接  
 在scripts_base_url_1=https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/  
@@ -21,7 +26,7 @@ https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/
 所有顺序做到一一对应
 4. 保存修改
 
-##### 方法2 修改git_diy.sh
+##### 方法3 修改git_diy.sh （较难，适合超爱折腾用户）
 1. git clone本项目到/diyscripts目录  
 git clone https://github.com/Hydrahail-Johnson/diy_scripts.git Hydra  
 注意名字可以自己修改
