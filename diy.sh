@@ -1,4 +1,8 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
+
+#把此diy.sh放入config即可,会自动同步最新脚本
+#如有好用的脚本或者脚本更新不及时请@qiao112
+#2021年3月2日00:01:58
 
 ########################修改更新频率为一小时一次##############################
 echo -e "开始修改更新时间"
@@ -89,9 +93,9 @@ do
 	  if [ -z "${script_date}" ];then
 	    cron_min=$(rand 1 59)
 	    cron_hour=$(rand 7 9)
-	    [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/diy.sh/a${cron_min} ${cron_hour} * * * bash jd $croname"  /jd/config/crontab.list
+	    [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname"  /jd/config/crontab.list
 	  else
-	    [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/diy.sh/a${script_date} bash jd $croname"  /jd/config/crontab.list
+	    [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/hangup/a${script_date} bash jd $croname"  /jd/config/crontab.list
 	  fi
     else
       [ -f $name.new ] && rm -f $name.new
