@@ -95,6 +95,7 @@ do
 	  else
 	    [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/hangup/a${script_date} bash jd $croname"  /jd/config/crontab.list
 	  fi
+	  [ -f "/jd/scripts/sendinfo.sh" ] && /bin/bash  /jd/scripts/sendinfo.sh "新增自定义脚本" "$croname"
     else
       [ -f $name.new ] && rm -f $name.new
       echo -e "更新 $name 失败，使用上一次正常的版本...\n"
