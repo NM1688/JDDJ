@@ -70,13 +70,13 @@ do
   echo -e "开始下载 $author 的脚本"
   # 下载my_scripts_list中的每个js文件，重命名增加前缀"作者昵称_"，增加后缀".new"
   eval scripts_list=\$my_scripts_list_${index}
-  echo $scripts_list
+  #echo $scripts_list
   eval url_list=\$scripts_base_url_${index}
-  echo $url_list
+  #echo $url_list
   for js in $scripts_list
   do
     eval url=$url_list$js
-    echo $url
+    #echo $url
     eval name=$author"_"$js
     echo $name
     wget -q --no-check-certificate $url -O $name.new
