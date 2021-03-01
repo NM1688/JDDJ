@@ -100,6 +100,7 @@ do
   done
   index=$[$index+1]
 done
+bash /jd/config/sharecode.sh
 ##############################同步 diy.sh ##########################################
 cd $ConfigDir
 echo -e "开始更新 diy.sh "
@@ -111,4 +112,3 @@ else
   rm -rf diy.sh.new
   echo -e "更新 diy.sh 失败，使用上一次正常的版本...\n"
 fi
-bash /jd/config/sharecode.sh
