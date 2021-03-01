@@ -2,7 +2,7 @@
 
 #把此diy.sh放入config即可,会自动同步最新脚本
 #如有好用的脚本或者脚本更新不及时请@qiao112
-#2021年3月2日00:01:58
+#2021年3月2日00:12:21
 
 ########################修改更新频率为一小时一次##############################
 echo -e "开始修改更新时间"
@@ -61,8 +61,6 @@ rand(){
     num=$(cat /proc/sys/kernel/random/uuid | cksum | awk -F ' ' '{print $1}')
     echo $(($num%$max+$min))
 }
-
-
 
 cd $ScriptsDir   # 在 git_pull.sh 中已经定义 ScriptsDir 此变量，diy.sh 由 git_pull.sh 调用，因此可以直接使用此变量
 index=1
