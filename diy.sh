@@ -2,7 +2,7 @@
 
 #把此diy.sh放入config即可,会自动同步最新脚本
 #如有好用的脚本或者脚本更新不及时请@qiao112
-#2021年3月2日02:04:00
+#2021年3月2日02:13:00
 
 ########################修改更新频率为一小时一次##############################
 echo -e "开始修改更新时间"
@@ -113,6 +113,7 @@ wget -q --no-check-certificate https://raw.githubusercontent.com/Hydrahail-Johns
 if [ $? -eq 0 ]; then
   mv -f diy.sh.new diy.sh
   echo -e "更新 diy.sh 完成"
+  [ -f "/jd/scripts/sendinfo.sh" ] && /bin/bash  /jd/scripts/sendinfo.sh "成功更新自定义脚本" "diy.sh"
 else
   rm -rf diy.sh.new
   echo -e "更新 diy.sh 失败，使用上一次正常的版本...\n"
