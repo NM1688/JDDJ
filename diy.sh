@@ -7,7 +7,7 @@
 ########################修改更新频率为一小时一次##############################
 echo -e "开始修改更新时间"
 if [ -f ${ListCron} ]; then
-  perl -i -pe "s|.+(bash git_pull.+)|35 \* \* \* \* \1|" ${ListCron}
+  perl -i -pe "s|.+(bash git_pull.+)|30 \* \* \* \* \1|" ${ListCron}
   crontab ${ListCron}
   echo -e "修改更新时间成功"
 else
