@@ -36,7 +36,7 @@ scripts_base_url_7=https://gitee.com/shuye72/MyActions/raw/main/
 my_scripts_list_1=""
 
 # 维护:i-chenzhe   库地址:https://github.com/i-chenzhe/qx
-my_scripts_list_2="jd_entertainment.js jd_fanslove.js jd_mlyjy.js jd_shake.js jd_shakeBean.js jd_shakeBean.js"
+my_scripts_list_2="jd_entertainment.js jd_fanslove.js jd_mlyjy.js jd_shake.js jd_shakeBean.js jd_shakeBean.js jd_jump-jump.js"
 
 # 维护:whyour      库地址:https://github.com/whyour/hundun/tree/master/quanx
 my_scripts_list_3="jd_zjd_tuan.js"
@@ -103,6 +103,7 @@ do
   done
   index=$[$index+1]
 done
+
 ##############################  格式化助力码  ########################################
 bash /jd/config/sharecode.sh
 
@@ -113,7 +114,6 @@ wget -q --no-check-certificate https://raw.githubusercontent.com/Hydrahail-Johns
 if [ $? -eq 0 ]; then
   mv -f diy.sh.new diy.sh
   echo -e "更新 diy.sh 完成"
-  [ -f "/jd/scripts/sendinfo.sh" ] && /bin/bash  /jd/scripts/sendinfo.sh "成功更新自定义脚本" "diy.sh"
 else
   rm -rf diy.sh.new
   echo -e "更新 diy.sh 失败，使用上一次正常的版本...\n"
