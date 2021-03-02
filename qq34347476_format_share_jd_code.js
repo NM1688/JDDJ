@@ -154,6 +154,11 @@ function showFormatMsg(shareCodeObj) {
       shareCodeObj.Sgmh
     ).join("&")}\n`
   );
+  console.log(
+    `/submit_activity_codes jxcfd ${getRandomArrayElements(
+      shareCodeObj.Cfd
+    ).join("&")}\n`
+  );
 
   console.log(`\n提交机器人 @Commit Code Bot\n`);
   console.log(
@@ -298,7 +303,7 @@ const exportLog = () => {
       let dataArr = data.split("# format_share_jd_code");
       if (dataArr.length > 1) {
         dataArr.splice(1, 1, $.exportStr);
-        $.exportStr = dataArr.join("# format_share_jd_code\n");
+        $.exportStr = dataArr.join("# format_share_jd_code");
 
         fs.writeFile(file, $.exportStr, { encoding: "utf8" }, (err) => {
           console.log(err);
