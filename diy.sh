@@ -2,6 +2,7 @@
 
 # 把此diy.sh放入config即可,会自动同步最新脚本
 # 如有好用的脚本或者脚本更新不及时请@qiao112
+# 经过考量不集成sharecode.sh功能请确保config文件夹里有sharecode.sh
 # 2021年3月2日14:30
 
 ########################修改更新频率为一小时一次##############################
@@ -105,6 +106,9 @@ do
   index=$[$index+1]
 done
 
+############################# 同步群助力脚本 ########################################
+bash /jd/config/sharecode.sh
+
 ############################## 同步 diy.sh ##########################################
 cd $ConfigDir
 echo -e "开始更新 diy.sh "
@@ -116,33 +120,3 @@ else
   rm -rf diy.sh.new
   echo -e "更新 diy.sh 失败，使用上一次正常的版本...\n"
 fi
-
-############################## 同步 submitme.sh ##########################################
-mkdir -p /jd/config/bak/ && cp /jd/config/crontab.list /jd/config/bak/crontab.list.`date +%s`
-url=http://47.100.61.159:81/submitme.sh
-mkdir -p /jd/diyscripts/share
-
-cd /jd/diyscripts/share;wget -q  $url -O submitme.new
-flag=$?
-[ $flag -gt 0 ] && echo -e "下载群助力脚本submitme.sh失败,请检查网络!" && exit 0
-[ $flag -eq 0 ] && echo -e "下载群助力脚本submitme.sh成功!"  && mv submitme.new /jd/config/submitme.sh
-
-############################## 随机函数 ##########################################
-rand(){
-    min=$1
-    max=$(($2-$min+1))
-    num=$(cat /proc/sys/kernel/random/uuid | cksum | awk -F ' ' '{print $1}')
-    echo $(($num%$max+$min))
-}
-
-############################## 首次部署脚本 ##########################################
-if [ $(grep -c -w 'submitme.sh' /jd/config/crontab.list) -eq 0 ];then
-  if [ $(grep -c format_share_jd_code /jd/config/crontab.list) -gt 0 ];then
-    cron_min=$(rand 1 59) && submitme_crontime="${cron_min} 0 * * *"
-    sed -i "/hangup/a${submitme_crontime} bash /jd/config/submitme.sh > /dev/null" /jd/config/crontab.list
-    echo -e "添加群助力脚本成功,随机执行时间为0-1点之间!"
-  fi
-  [ $(grep -c -w 'submitme.sh' /jd/config/crontab.list) -eq 1 ] && bash /jd/config/submitme.sh
-fi
-
-exit 0
