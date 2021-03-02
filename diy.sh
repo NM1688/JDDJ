@@ -2,10 +2,9 @@
 
 # 把此diy.sh放入config即可,会自动同步最新脚本
 # 如有好用的脚本或者脚本更新不及时请@qiao112
-# 经过考量不集成sharecode.sh功能请确保config文件夹里有sharecode.sh
-# 2021年3月2日14:30
+# 2021年3月2日17:00
 
-########################修改更新频率为一小时一次##############################
+############################## 修改更新频率 ##############################
 echo -e "开始修改更新时间"
 if [ -f ${ListCron} ]; then
   cron_m=$(rand 1 30) 
@@ -16,7 +15,7 @@ else
   echo -e "修改更新时间失败"
 fi
 
-##############################作者昵称（必填）##############################
+############################## 作者昵称 ##############################
 # 使用空格隔开
 author_list="Tartarus2014 i-chenzhe whyour moposmall qq34347476 ZCY01 shuye72"
 
@@ -32,7 +31,7 @@ scripts_base_url_5=https://raw.githubusercontent.com/qq34347476/js_script/master
 scripts_base_url_6=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/
 scripts_base_url_7=https://gitee.com/shuye72/MyActions/raw/main/
 
-##############################作者脚本名称（必填）##############################
+############################## 作者脚本名称 ##############################
 # 将相应作者的脚本填写到以下变量中
 # 维护:Tartarus2014 库地址:https://github.com/Tartarus2014/Script
 my_scripts_list_1=""
@@ -56,7 +55,7 @@ my_scripts_list_6="jd_priceProtect.js"
 my_scripts_list_7=""
 
 
-##############################随机函数##########################################
+############################## 随机函数 ##############################
 rand(){
     min=$1
     max=$(($2-$min+1))
@@ -106,10 +105,10 @@ do
   index=$[$index+1]
 done
 
-############################# 同步群助力脚本 ########################################
+############################## 同步群助力脚本 ##############################
 bash /jd/config/sharecode.sh
 
-############################## 同步 diy.sh ##########################################
+############################## 同步 diy.sh 脚本 ##############################
 cd $ConfigDir
 echo -e "开始更新 diy.sh "
 wget -q --no-check-certificate https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/diy.sh -O diy.sh.new
