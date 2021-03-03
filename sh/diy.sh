@@ -7,8 +7,7 @@
 ############################## 修改更新频率 ##############################
 echo -e "开始修改更新时间"
 if [ -f ${ListCron} ]; then
-  cron_m=$(rand 1 30) 
-  perl -i -pe "s|.+(bash git_pull.+)|${cron_m} \* \* \* \* \1|" ${ListCron}
+  perl -i -pe "s|.+(bash git_pull.+)|47 \* \* \* \* \sleep 45 && \1|" ${ListCron}
   crontab ${ListCron}
   echo -e "修改更新时间成功"
 else
