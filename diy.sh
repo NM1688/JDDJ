@@ -1,17 +1,12 @@
 #!/usr/bin/env bash
 
-
 # 把此diy.sh放入config即可,会自动同步最新脚本
 # 如有好用的脚本或者脚本更新不及时请@qiao112
-# 如需参加宠汪汪助力请把昵称提交给@Mr.spark 
-# 昵称获取:可在京东APP->我的->设置 查看获得
-# 2021年3月4日17:48
-
+# 2021年3月4日21:27
 
 ############################## 作者昵称 ##############################
 # 使用空格隔开
 author_list="Tartarus2014 i-chenzhe whyour moposmall qq34347476 ZCY01 shuye72"
-
 
 ##############################作者脚本地址URL（必填）##############################
 # 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
@@ -24,7 +19,6 @@ scripts_base_url_4=https://raw.githubusercontent.com/moposmall/Script/main/Me/
 scripts_base_url_5=https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 scripts_base_url_6=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/
 scripts_base_url_7=https://gitee.com/shuye72/MyActions/raw/main/
-
 
 ############################## 作者脚本名称 ##############################
 # 将相应作者的脚本填写到以下变量中
@@ -49,7 +43,6 @@ my_scripts_list_6="jd_priceProtect.js"
 # 维护:shuye72     库地址:https://gitee.com/shuye72/MyActions/tree/main ps:尽量不要使用此人脚本,
 my_scripts_list_7=""
 
-
 ############################## 随机函数 ##############################
 rand(){
     min=$1
@@ -57,7 +50,6 @@ rand(){
     num=$(cat /proc/sys/kernel/random/uuid | cksum | awk -F ' ' '{print $1}')
     echo $(($num%$max+$min))
 }
-
 
 ############################## 开始下载脚本 ##############################
 cd $ScriptsDir
@@ -97,7 +89,6 @@ do
   index=$[$index+1]
 done
 
-
 ############################## 修改更新频率 ##############################
 echo -e "开始修改更新时间"
 if [ -f ${ListCron} ]; then
@@ -109,14 +100,11 @@ else
   echo -e "修改更新时间失败"
 fi
 
-
 ############################## 宠汪汪群助力 ##############################
 #ls ${ConfigDir}/help_pet_run.sh && bash ${ConfigDir}/help_pet_run.sh || wget -O ${ConfigDir}/help_pet_run.sh http://47.100.61.159:81/help_pet_run.sh
 
-
 ############################## 同步群助力脚本 ##############################
 bash ${ConfigDir}/sharecode.sh
-
 
 ############################## 同步 diy.sh 脚本 ##############################
 cd $ConfigDir
