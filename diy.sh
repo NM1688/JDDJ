@@ -111,7 +111,7 @@ fi
 
 
 ############################## 宠汪汪群助力 ##############################
-ls ${ConfigDir}/help_pet_run.sh && bash ${ConfigDir}/help_pet_run.sh || wget -O ${ConfigDir}/help_pet_run.sh http://47.100.61.159:81/help_pet_run.sh
+#ls ${ConfigDir}/help_pet_run.sh && bash ${ConfigDir}/help_pet_run.sh || wget -O ${ConfigDir}/help_pet_run.sh http://47.100.61.159:81/help_pet_run.sh
 
 
 ############################## 同步群助力脚本 ##############################
