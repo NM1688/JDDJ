@@ -2,17 +2,7 @@
 
 # 把此diy.sh放入config即可,会自动同步最新脚本
 # 如有好用的脚本或者脚本更新不及时请@qiao112
-# 2021年3月2日17:00
-
-############################## 修改更新频率 ##############################
-echo -e "开始修改更新时间"
-if [ -f ${ListCron} ]; then
-  perl -i -pe "s|.+(bash git_pull.+)|47 \* \* \* \* \sleep 45 && \1|" ${ListCron}
-  crontab ${ListCron}
-  echo -e "修改更新时间成功"
-else
-  echo -e "修改更新时间失败"
-fi
+# 2021年3月3日18:54
 
 ############################## 作者昵称 ##############################
 # 使用空格隔开
@@ -36,7 +26,7 @@ scripts_base_url_7=https://gitee.com/shuye72/MyActions/raw/main/
 my_scripts_list_1=""
 
 # 维护:i-chenzhe   库地址:https://github.com/i-chenzhe/qx
-my_scripts_list_2="jd_entertainment.js jd_fanslove.js jd_mlyjy.js jd_shake.js jd_shakeBean.js jd_shakeBean.js jd_jump-jump.js"
+my_scripts_list_2="jd_entertainment.js jd_fanslove.js jd_mlyjy.js jd_shake.js jd_shakeBean.js jd_shakeBean.js jd_jump-jump.js jd_xmf.js"
 
 # 维护:whyour      库地址:https://github.com/whyour/hundun/tree/master/quanx
 my_scripts_list_3="jd_zjd_tuan.js"
@@ -104,6 +94,16 @@ do
   index=$[$index+1]
 done
 
+############################## 修改更新频率 ##############################
+echo -e "开始修改更新时间"
+if [ -f ${ListCron} ]; then
+  cron_min=$(rand 1 30) 
+  perl -i -pe "s|.+(bash git_pull.+)|${cron_min} \* \* \* \* \1|" ${ListCron}
+  crontab ${ListCron}
+  echo -e "修改更新时间成功"
+else
+  echo -e "修改更新时间失败"
+fi
 ############################## 同步群助力脚本 ##############################
 bash /jd/config/sharecode.sh
 
