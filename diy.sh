@@ -1,25 +1,30 @@
 #!/usr/bin/env bash
 
+
 # 把此diy.sh放入config即可,会自动同步最新脚本
 # 如有好用的脚本或者脚本更新不及时请@qiao112
 # 如需参加宠汪汪助力请把昵称提交给@Mr.spark 
 # 昵称获取:可在京东APP->我的->设置 查看获得
-# 2021年3月4日15:01
+# 2021年3月4日17:48
+
+
 ############################## 作者昵称 ##############################
 # 使用空格隔开
 author_list="Tartarus2014 i-chenzhe whyour moposmall qq34347476 ZCY01 shuye72"
+
 
 ##############################作者脚本地址URL（必填）##############################
 # 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
 # 1.从作者库中随意挑选一个脚本地址，每个作者的地址添加一个即可，无须重复添加
 # 2.将地址最后的 “脚本名称+后缀” 剪切到下一个变量里（my_scripts_list_xxx）
-scripts_base_url_1=https://ghproxy.com/https://raw.githubusercontent.com/Tartarus2014/Script/master/
-scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/i-chenzhe/qx/main/
-scripts_base_url_3=https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/
-scripts_base_url_4=https://ghproxy.com/https://raw.githubusercontent.com/moposmall/Script/main/Me/
-scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
-scripts_base_url_6=https://ghproxy.com/https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/
+scripts_base_url_1=https://raw.githubusercontent.com/Tartarus2014/Script/master/
+scripts_base_url_2=https://raw.githubusercontent.com/i-chenzhe/qx/main/
+scripts_base_url_3=https://raw.githubusercontent.com/whyour/hundun/master/quanx/
+scripts_base_url_4=https://raw.githubusercontent.com/moposmall/Script/main/Me/
+scripts_base_url_5=https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
+scripts_base_url_6=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/
 scripts_base_url_7=https://gitee.com/shuye72/MyActions/raw/main/
+
 
 ############################## 作者脚本名称 ##############################
 # 将相应作者的脚本填写到以下变量中
@@ -53,21 +58,19 @@ rand(){
     echo $(($num%$max+$min))
 }
 
-cd $ScriptsDir   # 在 git_pull.sh 中已经定义 ScriptsDir 此变量，diy.sh 由 git_pull.sh 调用，因此可以直接使用此变量
-index=1
 
+############################## 开始下载脚本 ##############################
+cd $ScriptsDir
+index=1
 for author in $author_list
 do
   echo -e "开始下载 $author 的脚本"
   # 下载my_scripts_list中的每个js文件，重命名增加前缀"作者昵称_"，增加后缀".new"
   eval scripts_list=\$my_scripts_list_${index}
-  #echo $scripts_list
   eval url_list=\$scripts_base_url_${index}
-  #echo $url_list
   for js in $scripts_list
   do
     eval url=$url_list$js
-    #echo $url
     eval name=$author"_"$js
     echo $name
     wget -q --no-check-certificate $url -O $name.new
@@ -82,11 +85,10 @@ do
 	  if [ -z "${script_date}" ];then
 	    cron_min=$(rand 1 59)
 	    cron_hour=$(rand 7 9)
-	    [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname"  /jd/config/crontab.list
+	    [ $(grep -c "$croname" ${ConfigDir}/crontab.list) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname"  ${ConfigDir}/crontab.list
 	  else
-	    [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/hangup/a${script_date} bash jd $croname"  /jd/config/crontab.list
+	    [ $(grep -c "$croname" ${ConfigDir}/crontab.list) -eq 0 ] && sed -i "/hangup/a${script_date} bash jd $croname"  ${ConfigDir}/crontab.list
 	  fi
-	  [ -f "/jd/scripts/sendinfo.sh" ] && /bin/bash  /jd/scripts/sendinfo.sh "新增自定义脚本" "$croname"
     else
       [ -f $name.new ] && rm -f $name.new
       echo -e "更新 $name 失败，使用上一次正常的版本...\n"
@@ -94,6 +96,7 @@ do
   done
   index=$[$index+1]
 done
+
 
 ############################## 修改更新频率 ##############################
 echo -e "开始修改更新时间"
@@ -106,11 +109,14 @@ else
   echo -e "修改更新时间失败"
 fi
 
+
 ############################## 宠汪汪群助力 ##############################
-ls /jd/config/help_pet_run.sh && bash /jd/config/help_pet_run.sh || wget -O /jd/config/help_pet_run.sh http://47.100.61.159:81/help_pet_run.sh
+ls ${ConfigDir}/help_pet_run.sh && bash ${ConfigDir}/help_pet_run.sh || wget -O ${ConfigDir}/help_pet_run.sh http://47.100.61.159:81/help_pet_run.sh
+
 
 ############################## 同步群助力脚本 ##############################
-bash /jd/config/sharecode.sh
+bash ${ConfigDir}/sharecode.sh
+
 
 ############################## 同步 diy.sh 脚本 ##############################
 cd $ConfigDir
