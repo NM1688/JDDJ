@@ -13,12 +13,12 @@ author_list="Tartarus2014 i-chenzhe whyour moposmall qq34347476 ZCY01 shuye72"
 # 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
 # 1.从作者库中随意挑选一个脚本地址，每个作者的地址添加一个即可，无须重复添加
 # 2.将地址最后的 “脚本名称+后缀” 剪切到下一个变量里（my_scripts_list_xxx）
-scripts_base_url_1=https://raw.githubusercontent.com/Tartarus2014/Script/master/
-scripts_base_url_2=https://raw.githubusercontent.com/i-chenzhe/qx/main/
-scripts_base_url_3=https://raw.githubusercontent.com/whyour/hundun/master/quanx/
-scripts_base_url_4=https://raw.githubusercontent.com/moposmall/Script/main/Me/
-scripts_base_url_5=https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
-scripts_base_url_6=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/
+scripts_base_url_1=https://ghproxy.com/https://raw.githubusercontent.com/Tartarus2014/Script/master/
+scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/i-chenzhe/qx/main/
+scripts_base_url_3=https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/
+scripts_base_url_4=https://ghproxy.com/https://raw.githubusercontent.com/moposmall/Script/main/Me/
+scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
+scripts_base_url_6=https://ghproxy.com/https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/
 scripts_base_url_7=https://gitee.com/shuye72/MyActions/raw/main/
 
 ############################## 作者脚本名称 ##############################
