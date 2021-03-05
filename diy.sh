@@ -8,7 +8,7 @@
 # 使用空格隔开
 author_list="Tartarus2014 i-chenzhe whyour moposmall qq34347476 ZCY01 shuye72"
 
-##############################作者脚本地址URL（必填）##############################
+############################## 脚本地址 ##############################
 # 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
 # 1.从作者库中随意挑选一个脚本地址，每个作者的地址添加一个即可，无须重复添加
 # 2.将地址最后的 “脚本名称+后缀” 剪切到下一个变量里（my_scripts_list_xxx）
@@ -20,7 +20,7 @@ scripts_base_url_5https://cdn.jsdelivr.net/gh/qq34347476/js_script@master/script
 scripts_base_url_6https://cdn.jsdelivr.net/gh/ZCY01/daily_scripts@main/jd/
 scripts_base_url_7=https://gitee.com/shuye72/MyActions/raw/main/
 
-############################## 作者脚本名称 ##############################
+############################## 脚本名称 ##############################
 # 将相应作者的脚本填写到以下变量中
 # 维护:Tartarus2014 库地址:https://github.com/Tartarus2014/Script
 my_scripts_list_1=""
@@ -51,12 +51,12 @@ rand(){
     echo $(($num%$max+$min))
 }
 
-############################## 开始下载脚本 ##############################
+############################## 下载脚本 ##############################
 cd $ScriptsDir
 index=1
 for author in $author_list
 do
-  echo -e "开始下载 $author 的脚本"
+  echo -e "############################## 开始下载 $author 的脚本 ##############################"
   # 下载my_scripts_list中的每个js文件，重命名增加前缀"作者昵称_"，增加后缀".new"
   eval scripts_list=\$my_scripts_list_${index}
   eval url_list=\$scripts_base_url_${index}
@@ -100,10 +100,10 @@ else
   echo -e "修改更新时间失败"
 fi
 
-############################## 同步群助力脚本 ##############################
+############################## 更新群助力脚本 ##############################
 bash ${ConfigDir}/sharecode.sh
 
-############################## 同步 diy.sh 脚本 ##############################
+############################## 更新diy.sh ##############################
 cd $ConfigDir
 echo -e "开始更新 diy.sh "
 wget -q --no-check-certificate https://cdn.jsdelivr.net/gh/Hydrahail-Johnson/diy_scripts@main/diy.sh -O diy.sh.new
