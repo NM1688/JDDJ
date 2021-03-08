@@ -37,6 +37,10 @@ git clone https://github.com/Hydrahail-Johnson/diy_scripts.git Hydra
 #### 注意事项
 方法1和方法2依赖于git_pull的更新时间，可能更新不够及时，如果介意请使用方法3。
 
+#### 小福利
+由于国内用户github访问过慢，下载速度垃圾，提供一个本人搭建的github加速节点，仅支持小文件加速
+https://github.zjxnas.tk
+
 #### 参与贡献
 
 [qiaoqi](https://github.com/qiao112)
