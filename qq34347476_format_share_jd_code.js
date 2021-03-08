@@ -16,9 +16,7 @@
  */
 const $ = new Env("获取互助码并格式化/docker自动更新容器下所有账号互助码");
 const notifyMsg = `
-更新互助码获取途径逻辑\n
-更新 自定义是否需要开启通知\n
-更新 财富到互助码\n
+更新 环球挑战赛互助码\n
 \n
 新手写脚本难免有BUG，做好配置备份
 有问题随时git留言
@@ -81,7 +79,8 @@ if (!$.isNode()) {
       $.shareCodeObj.Cfd = exportShareCodes(arr, "京喜财富岛：");
       $.shareCodeObj.Kdsd = exportShareCodes(arr, "口袋书店：");
       $.shareCodeObj.Jdcfd = exportShareCodes(arr, "京喜财富岛：");
-
+      $.shareCodeObj.Global = exportShareCodes(arr, "环球挑战赛：");
+      
       showFormatMsg($.shareCodeObj);
       exportLog()
 
@@ -229,6 +228,12 @@ function showFormatMsg(shareCodeObj) {
     "京喜财富岛",
     "MyJdcfd",
     "ForOtherJdcfd"
+  );
+  formatShareCodesForLinux(
+    shareCodeObj.Global,
+    "环球挑战赛",
+    "MyGlobal",
+    "ForOtherGlobal"
   );
 }
 
