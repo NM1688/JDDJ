@@ -2,7 +2,7 @@
 
 # 把此diy.sh放入config即可,会自动同步最新脚本
 # 如有好用的脚本或者脚本更新不及时请@qiao112
-# 2021年3月5日23:00
+# 2021年3月8日17:26
 
 ############################## 作者昵称 ##############################
 # 使用空格隔开
@@ -26,7 +26,7 @@ scripts_base_url_7=https://gitee.com/shuye72/MyActions/raw/main/
 my_scripts_list_1=""
 
 # 维护:i-chenzhe   库地址:https://github.com/i-chenzhe/qx
-my_scripts_list_2="jd_entertainment.js jd_fanslove.js jd_gjmh.js jd_mlyjy.js jd_shake.js jd_shakeBean.js jd_jump-jump.js jd_xmf.js z_marketLottery.js"
+my_scripts_list_2="jd_entertainment.js jd_fanslove.js jd_gjmh.js jd_mlyjy.js jd_shake.js jd_shakeBean.js jd_jump_jump.js jd_xmf.js z_marketLottery.js"
 
 # 维护:whyour      库地址:https://github.com/whyour/hundun/tree/master/quanx
 my_scripts_list_3="jd_zjd_tuan.js"
