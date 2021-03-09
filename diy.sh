@@ -5,13 +5,9 @@
 # 2021年3月9日19:50
 
 ############################## 作者昵称 ##############################
-# 使用空格隔开
 author_list="Tartarus2014 i-chenzhe whyour moposmall qq34347476 ZCY01 shuye72"
 
 ############################## 脚本地址 ##############################
-# 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
-# 1.从作者库中随意挑选一个脚本地址，每个作者的地址添加一个即可，无须重复添加
-# 2.将地址最后的 “脚本名称+后缀” 剪切到下一个变量里（my_scripts_list_xxx）
 scripts_base_url_1=https://ghproxy.com/https://raw.githubusercontent.com/Tartarus2014/Script/master/
 scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/i-chenzhe/qx/main/
 scripts_base_url_3=https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/
@@ -22,7 +18,6 @@ scripts_base_url_7=https://ghproxy.com/https://raw.githubusercontent.com/jinboyi
 scripts_base_url_8=https://gitee.com/shuye72/MyActions/raw/main/
 
 ############################## 脚本名称 ##############################
-# 将相应作者的脚本填写到以下变量中
 # 维护:Tartarus2014 库地址:https://github.com/Tartarus2014/Script
 my_scripts_list_1=""
 
