@@ -90,13 +90,13 @@ do
       if [ "${check_existing_cron}" -ne 0 ]; then
         grep -v "$croname" /jd/config/crontab.list > output.txt
         mv -f output.txt /jd/config/crontab.list
-        echo -e "已成功删除"$name"脚本定时\n"
+        echo -e "已删除"$name"脚本定时...\n"
         rm -f ${name:-default}
-        echo -e "已成功删除"$name"脚本文件\n"
+        echo -e "已删除"$name"脚本文件...\n"
         cd $LogDir
         rm -rf ${croname:-default}
         cd $ScriptsDir
-        echo -e "已成功删除"$name"脚本日志\n"
+        echo -e "已删除"$name"脚本日志...\n"
       fi
     fi
   done
@@ -109,9 +109,9 @@ if [ -f ${ListCron} ]; then
   cron_min=$(rand 1 30) 
   perl -i -pe "s|.+(bash git_pull.+)|${cron_min} \* \* \* \* \1|" ${ListCron}
   crontab ${ListCron}
-  echo -e "修改更新时间成功"
+  echo -e "修改更新频率成功..."
 else
-  echo -e "修改更新时间失败"
+  echo -e "修改更新时间失败..."
 fi
 
 ############################## 更新群助力脚本 ##############################
@@ -123,8 +123,8 @@ echo -e "开始更新 diy.sh "
 wget -q --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/diy.sh -O diy.sh.new
 if [ $? -eq 0 ]; then
   mv -f diy.sh.new diy.sh
-  echo -e "更新 diy.sh 完成"
+  echo -e "更新 diy.sh 成功..."
 else
   rm -rf diy.sh.new
-  echo -e "更新 diy.sh 失败，使用上一次正常的版本...\n"
+  echo -e "更新 diy.sh 失败...\n"
 fi
