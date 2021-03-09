@@ -1,4 +1,4 @@
-# Hydra_Scripts
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Hydrahail-Johnson)](https://github.com/anuraghazra/github-readme-stats)
 
 #### 介绍
 本库是用来同步大佬们的自定义js脚本，本人并不做任何脚本修改，保证原作者脚本的原汁原味  
