@@ -5,7 +5,7 @@
 # 2021年3月9日19:50
 
 ############################## 作者昵称 ##############################
-author_list="Tartarus2014 i-chenzhe whyour moposmall qq34347476 ZCY01 jinboyigu shuye72"
+author_list="Tartarus2014 i-chenzhe whyour moposmall qq34347476 ZCY01 Hydrahail shuye72"
 
 ############################## 脚本地址 ##############################
 scripts_base_url_1=https://ghproxy.com/https://raw.githubusercontent.com/Tartarus2014/Script/master/
