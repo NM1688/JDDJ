@@ -2,7 +2,7 @@
 
 # 把此diy.sh放入config即可,会自动同步最新脚本
 # 如有好用的脚本或者脚本更新不及时请@qiao112
-# 2021年3月9日17:36
+# 2021年3月9日19:50
 
 ############################## 作者昵称 ##############################
 # 使用空格隔开
@@ -89,13 +89,13 @@ do
       if [ "${check_existing_cron}" -ne 0 ]; then
         grep -v "$croname" /jd/config/crontab.list > output.txt
         mv -f output.txt /jd/config/crontab.list
-        echo -e "已删除"$name"脚本定时...\n"
+        echo -e "成功清理"$name"定时...\n"
         rm -f ${name:-default}
-        echo -e "已删除"$name"脚本文件...\n"
+        echo -e "成功清理"$name"文件...\n"
         cd $LogDir
         rm -rf ${croname:-default}
         cd $ScriptsDir
-        echo -e "已删除"$name"脚本日志...\n"
+        echo -e "成功清理"$name"日志...\n"
       fi
     fi
   done
