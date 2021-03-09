@@ -19,6 +19,7 @@ scripts_base_url_3=https://raw.githubusercontent.com/whyour/hundun/master/quanx/
 scripts_base_url_4=https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 scripts_base_url_5=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/
 scripts_base_url_6=https://gitee.com/shuye72/MyActions/raw/main/
+scripts_base_url_7=https://raw.githubusercontent.com/jinboyigu/lazy_script/master/src/jd/sign/
 
 #####################  作者脚本名称 ##########################
 #维护:i-chenzhe     库地址:https://github.com/i-chenzhe/qx
@@ -38,6 +39,9 @@ my_scripts_list_5=""
 
 # 维护:shuye72      库地址:https://gitee.com/shuye72/MyActions/tree/main ps:尽量不要使用此人脚本,
 my_scripts_list_6=""
+
+# 维护:jinboyigu    库地址:https://github.com/jinboyigu/lazy_script/tree/master/src/jd/
+my_scripts_list_7="shop.js"
 
 ######################  是否使用本地代理  ######################
 Enableproxy="false"
