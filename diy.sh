@@ -71,7 +71,7 @@ do
     # 如果上一步下载没问题，才去掉后缀".new"，如果上一步下载有问题，就保留之前正常下载的版本
     if [ $? -eq 0 ]; then
       mv -f $name.new $name
-      echo -e "更新 $name 完成!!!\n"
+      echo -e "$name 更新成功!!!\n"
 	  croname=`echo "$name"|awk -F\. '{print $1}'`
 	  script_date=`cat  $name|grep "http"|awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5}'|sort |uniq|head -n 1`
 	  if [ -z "${script_date}" ];then
@@ -83,19 +83,19 @@ do
 	  fi
     else
       [ -f $name.new ] && rm -f $name.new
-      echo -e "更新 $name 失败,开始清理残留...\n"
+      echo -e "$name 更新失败...\n"
       croname=`echo "$name"|awk -F\. '{print $1}'`
       check_existing_cron=`grep -c "$croname" /jd/config/crontab.list`
       if [ "${check_existing_cron}" -ne 0 ]; then
         grep -v "$croname" /jd/config/crontab.list > output.txt
         mv -f output.txt /jd/config/crontab.list
-        echo -e "成功清理"$name"定时...\n"
+        echo -e "检测到"$name"残留文件...\n"
         rm -f ${name:-default}
-        echo -e "成功清理"$name"文件...\n"
+        echo -e "开始清理"$name"残留文件...\n"
         cd $LogDir
         rm -rf ${croname:-default}
         cd $ScriptsDir
-        echo -e "成功清理"$name"日志...\n"
+        echo -e "清理"$name"残留文件完成...\n"
       fi
     fi
   done
