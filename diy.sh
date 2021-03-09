@@ -71,7 +71,7 @@ do
     # 如果上一步下载没问题，才去掉后缀".new"，如果上一步下载有问题，就保留之前正常下载的版本
     if [ $? -eq 0 ]; then
       mv -f $name.new $name
-      echo -e "更新 $name 完成!\n"
+      echo -e "更新 $name 完成!!!\n"
 	  croname=`echo "$name"|awk -F\. '{print $1}'`
 	  script_date=`cat  $name|grep "http"|awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5}'|sort |uniq|head -n 1`
 	  if [ -z "${script_date}" ];then
@@ -108,7 +108,7 @@ if [ -f ${ListCron} ]; then
   cron_min=$(rand 1 30) 
   perl -i -pe "s|.+(bash git_pull.+)|${cron_min} \* \* \* \* \1|" ${ListCron}
   crontab ${ListCron}
-  echo -e "修改更新频率成功!"
+  echo -e "修改更新频率成功!!!"
 else
   echo -e "修改更新时间失败..."
 fi
@@ -122,7 +122,7 @@ echo -e "开始更新 diy.sh "
 wget -q --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/diy.sh -O diy.sh.new
 if [ $? -eq 0 ]; then
   mv -f diy.sh.new diy.sh
-  echo -e "更新 diy.sh 成功!"
+  echo -e "更新 diy.sh 成功!!!"
 else
   rm -rf diy.sh.new
   echo -e "更新 diy.sh 失败...\n"
