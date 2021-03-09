@@ -2,7 +2,7 @@
 
 # 把此diy.sh放入config即可,会自动同步最新脚本
 # 如有好用的脚本或者脚本更新不及时请@qiao112
-# 2021年3月8日17:26
+# 2021年3月9日17:36
 
 ############################## 作者昵称 ##############################
 # 使用空格隔开
@@ -54,9 +54,10 @@ rand(){
 ############################## 下载脚本 ##############################
 cd $ScriptsDir
 index=1
+
 for author in $author_list
 do
-  echo -e "############################## 开始下载 $author 的脚本 ##############################"
+  echo -e "######################### 开始下载 $author 的脚本 #########################"
   # 下载my_scripts_list中的每个js文件，重命名增加前缀"作者昵称_"，增加后缀".new"
   eval scripts_list=\$my_scripts_list_${index}
   eval url_list=\$scripts_base_url_${index}
@@ -83,7 +84,20 @@ do
 	  fi
     else
       [ -f $name.new ] && rm -f $name.new
-      echo -e "更新 $name 失败，使用上一次正常的版本...\n"
+      echo -e "更新 $name 失败...\n"
+      croname=`echo "$name"|awk -F\. '{print $1}'`
+      check_existing_cron=`grep -c "$croname" /jd/config/crontab.list`
+      if [ "${check_existing_cron}" -ne 0 ]; then
+        grep -v "$croname" /jd/config/crontab.list > output.txt
+        mv -f output.txt /jd/config/crontab.list
+        echo -e "已成功删除"$name"脚本定时\n"
+        rm -f ${name:-default}
+        echo -e "已成功删除"$name"脚本文件\n"
+        cd $LogDir
+        rm -rf ${croname:-default}
+        cd $ScriptsDir
+        echo -e "已成功删除"$name"脚本日志\n"
+      fi
     fi
   done
   index=$[$index+1]
