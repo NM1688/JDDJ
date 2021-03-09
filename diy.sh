@@ -37,7 +37,7 @@ my_scripts_list_5="format_share_jd_code.js"
 my_scripts_list_6="jd_priceProtect.js"
 
 # 维护:Hydrahail   库地址:https://github.com/Hydrahail-Johnson/diy_scripts
-my_scripts_list_7=""
+my_scripts_list_7="shopsign.js"
 
 # 维护:shuye72     库地址:https://gitee.com/shuye72/MyActions/tree/main ps:尽量不要使用此人脚本,
 my_scripts_list_8=""
