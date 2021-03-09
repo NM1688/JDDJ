@@ -83,7 +83,7 @@ do
 	  fi
     else
       [ -f $name.new ] && rm -f $name.new
-      echo -e "$name 更新失败...\n"
+      echo -e "$name 脚本失效,已删除脚本\n"
       croname=`echo "$name"|awk -F\. '{print $1}'`
       check_existing_cron=`grep -c "$croname" /jd/config/crontab.list`
       if [ "${check_existing_cron}" -ne 0 ]; then
