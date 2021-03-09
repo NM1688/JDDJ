@@ -13,7 +13,7 @@ https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/
 
 ##### 方法1. 修改diy.sh （最简单，适合小白用户）
 1. 从网页上复制diy.sh文件的内容，在web面板中替换自己原有的自定义任务后，保存修改。
-diy.sh下载地址：https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/sh/git.sh
+diy.sh下载地址：https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/sh/diy.sh
 
 ##### 方法2. 修改diy.sh （次简单，适合爱折腾用户）
 在web面板修改自定义任务，修改内容如下：
