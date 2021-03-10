@@ -42,6 +42,7 @@ jd_shake.js
 jd_shakeBean.js
 z_marketLottery.js
 z_superDay.js
+z_unionPoster.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
