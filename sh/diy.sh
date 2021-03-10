@@ -28,10 +28,10 @@ scripts_base_url_7=https://gitee.com/shuye72/MyActions/raw/main/
 my_scripts_list_1=""
 
 # 维护:i-chenzhe   库地址:https://github.com/i-chenzhe/qx
-my_scripts_list_2="jd_entertainment.js jd_fanslove.js jd_mlyjy.js jd_shake.js jd_shakeBean.js jd_shakeBean.js jd_jump-jump.js jd_xmf.js z_marketLottery.js"
+my_scripts_list_2="jd_entertainment.js jd_fanslove.js jd_shake.js jd_shakeBean.js jd_gjmh.js z_marketLottery.js z_superDay.js z_unionPoster.js"
 
 # 维护:whyour      库地址:https://github.com/whyour/hundun/tree/master/quanx
-my_scripts_list_3="jd_zjd_tuan.js"
+my_scripts_list_3="jd_zjd.js jd_zjd_tuan.js"
 
 # 维护:moposmall   库地址:https://github.com/moposmall/Script/tree/main/Me
 my_scripts_list_4="jx_cfd_exchange.js"
