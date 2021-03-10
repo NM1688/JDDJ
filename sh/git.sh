@@ -29,7 +29,7 @@ my_scripts_list_1="jd_entertainment.js jd_fanslove.js jd_shake.js jd_gjmh.js jd_
 my_scripts_list_2="jx_cfd_exchange.js"
 
 # 维护:whyour       库地址:https://github.com/whyour/hundun/tree/master/quanx
-my_scripts_list_3="jd_zjd.js jd_zjd_tuan.js"
+my_scripts_list_3="jd_zjd_tuan.js"
 
 # 维护:qq34347476   库地址:https://gitee.com/qq34347476/quantumult-x
 my_scripts_list_4="format_share_jd_code.js"
