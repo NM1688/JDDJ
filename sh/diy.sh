@@ -4,7 +4,7 @@
 # 如有好用的脚本或者脚本更新不及时请@qiao112
 # 如需参加宠汪汪助力请把昵称提交给@Mr.spark 
 # 昵称获取:可在京东APP->我的->设置 查看获得
-# 2021年3月3日18:54
+# 2021年3月11日18:00
 
 ############################## 作者昵称 ##############################
 # 使用空格隔开
@@ -31,7 +31,7 @@ my_scripts_list_1=""
 my_scripts_list_2="jd_entertainment.js jd_fanslove.js jd_shake.js jd_shakeBean.js jd_gjmh.js z_marketLottery.js z_superDay.js z_unionPoster.js"
 
 # 维护:whyour      库地址:https://github.com/whyour/hundun/tree/master/quanx
-my_scripts_list_3="jd_zjd.js jd_zjd_tuan.js"
+my_scripts_list_3="jd_zjd_tuan.js"
 
 # 维护:moposmall   库地址:https://github.com/moposmall/Script/tree/main/Me
 my_scripts_list_4="jx_cfd_exchange.js"
