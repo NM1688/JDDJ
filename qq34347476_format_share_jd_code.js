@@ -55,6 +55,7 @@ if (!$.isNode()) {
       console.log("读取文件成功");
       // console.log(data);
       // 按 互助码  分割
+
       let arr = data
         .split("\n")
         .map((item) => {
@@ -79,7 +80,7 @@ if (!$.isNode()) {
       $.shareCodeObj.Cfd = exportShareCodes(arr, "京喜财富岛：");
       $.shareCodeObj.Kdsd = exportShareCodes(arr, "口袋书店：");
       $.shareCodeObj.Jdcfd = exportShareCodes(arr, "京喜财富岛：");
-      $.shareCodeObj.Global = exportShareCodes(arr, "环球挑战赛：");
+      // $.shareCodeObj.Global = exportShareCodes(arr, "环球挑战赛：");
 
       showFormatMsg($.shareCodeObj);
       exportLog()
@@ -122,119 +123,139 @@ function showFormatMsg(shareCodeObj) {
     `\n========== 【格式化互助码只留随机4-5个(一定有第一个)】 ==========`
   );
   console.log(`\n提交机器人 @Turing Lab Bot\n`);
-  console.log(
-    `/submit_activity_codes bean ${getRandomArrayElements(
-      shareCodeObj.Bean
-    ).join("&")}\n`
-  );
-  console.log(
-    `/submit_activity_codes farm ${getRandomArrayElements(
-      shareCodeObj.Fruit
-    ).join("&")}\n`
-  );
-  console.log(
-    `/submit_activity_codes pet ${getRandomArrayElements(shareCodeObj.Pet).join(
-      "&"
-    )}\n`
-  );
-  console.log(
-    `/submit_activity_codes jxfactory ${getRandomArrayElements(
-      shareCodeObj.DreamFactory
-    ).join("&")}\n`
-  );
-  console.log(
-    `/submit_activity_codes ddfactory ${getRandomArrayElements(
-      shareCodeObj.JdFactory
-    ).join("&")}\n`
-  );
+  shareCodeObj.Bean &&
+    console.log(
+      `/submit_activity_codes bean ${getRandomArrayElements(
+        shareCodeObj.Bean
+      ).join("&")}\n`
+    );
+  shareCodeObj.Fruit &&
+    console.log(
+      `/submit_activity_codes farm ${getRandomArrayElements(
+        shareCodeObj.Fruit
+      ).join("&")}\n`
+    );
+  shareCodeObj.Pet &&
+    console.log(
+      `/submit_activity_codes pet ${getRandomArrayElements(
+        shareCodeObj.Pet
+      ).join("&")}\n`
+    );
+  shareCodeObj.DreamFactory &&
+    console.log(
+      `/submit_activity_codes jxfactory ${getRandomArrayElements(
+        shareCodeObj.DreamFactory
+      ).join("&")}\n`
+    );
+  shareCodeObj.JdFactory &&
+    console.log(
+      `/submit_activity_codes ddfactory ${getRandomArrayElements(
+        shareCodeObj.JdFactory
+      ).join("&")}\n`
+    );
   // 临时活动
-  console.log(
-    `/submit_activity_codes sgmh ${getRandomArrayElements(
-      shareCodeObj.Sgmh
-    ).join("&")}\n`
-  );
-  console.log(
-    `/submit_activity_codes jxcfd ${getRandomArrayElements(
-      shareCodeObj.Cfd
-    ).join("&")}\n`
-  );
+  shareCodeObj.Sgmh &&
+    console.log(
+      `/submit_activity_codes sgmh ${getRandomArrayElements(
+        shareCodeObj.Sgmh
+      ).join("&")}\n`
+    );
+  shareCodeObj.Cfd &&
+    console.log(
+      `/submit_activity_codes jxcfd ${getRandomArrayElements(
+        shareCodeObj.Cfd
+      ).join("&")}\n`
+    );
 
   console.log(`\n提交机器人 @Commit Code Bot\n`);
-  console.log(
-    `/jdcash ${getRandomArrayElements(shareCodeObj.Cash).join("&")}\n`
-  );
-  console.log(
-    `/jdcrazyjoy ${getRandomArrayElements(shareCodeObj.Joy).join("&")}\n`
-  );
+  shareCodeObj.Cash &&
+    console.log(
+      `/jdcash ${getRandomArrayElements(shareCodeObj.Cash).join("&")}\n`
+    );
+  shareCodeObj.Joy &&
+    console.log(
+      `/jdcrazyjoy ${getRandomArrayElements(shareCodeObj.Joy).join("&")}\n`
+    );
 
   console.log(`\n========== 【格式化互助码for docker ==========`);
-  formatShareCodesForLinux(
-    shareCodeObj.Bean,
-    "种豆得豆",
-    "MyBean",
-    "ForOtherBean"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.Fruit,
-    "东东农场",
-    "MyFruit",
-    "ForOtherFruit"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.Pet,
-    "东东萌宠",
-    "MyPet",
-    "ForOtherPet"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.Jxnc,
-    "京喜农场",
-    "MyJxnc",
-    "ForOtherJxnc",
-    "'"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.DreamFactory,
-    "京喜工厂",
-    "MyDreamFactory",
-    "ForOtherDreamFactory"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.JdFactory,
-    "东东工厂",
-    "MyJdFactory",
-    "ForOtherJdFactory"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.Cash,
-    "签到领现金",
-    "MyCash",
-    "ForOtherCash"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.Joy,
-    "crazy joy",
-    "MyJoy",
-    "ForOtherJoy"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.Sgmh,
-    "闪购盲盒",
-    "MySgmh",
-    "ForOtherSgmh"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.Jdcfd,
-    "京喜财富岛",
-    "MyJdcfd",
-    "ForOtherJdcfd"
-  );
-  formatShareCodesForLinux(
-    shareCodeObj.Global,
-    "环球挑战赛",
-    "MyGlobal",
-    "ForOtherGlobal"
-  );
+  shareCodeObj.Bean &&
+    formatShareCodesForLinux(
+      shareCodeObj.Bean,
+      "种豆得豆",
+      "MyBean",
+      "ForOtherBean"
+    );
+  shareCodeObj.Fruit &&
+    formatShareCodesForLinux(
+      shareCodeObj.Fruit,
+      "东东农场",
+      "MyFruit",
+      "ForOtherFruit"
+    );
+  shareCodeObj.Pet &&
+    formatShareCodesForLinux(
+      shareCodeObj.Pet,
+      "东东萌宠",
+      "MyPet",
+      "ForOtherPet"
+    );
+  shareCodeObj.Jxnc &&
+    formatShareCodesForLinux(
+      shareCodeObj.Jxnc,
+      "京喜农场",
+      "MyJxnc",
+      "ForOtherJxnc",
+      "'"
+    );
+  shareCodeObj.DreamFactory &&
+    formatShareCodesForLinux(
+      shareCodeObj.DreamFactory,
+      "京喜工厂",
+      "MyDreamFactory",
+      "ForOtherDreamFactory"
+    );
+  shareCodeObj.JdFactory &&
+    formatShareCodesForLinux(
+      shareCodeObj.JdFactory,
+      "东东工厂",
+      "MyJdFactory",
+      "ForOtherJdFactory"
+    );
+  shareCodeObj.Cash &&
+    formatShareCodesForLinux(
+      shareCodeObj.Cash,
+      "签到领现金",
+      "MyCash",
+      "ForOtherCash"
+    );
+  shareCodeObj.Joy &&
+    formatShareCodesForLinux(
+      shareCodeObj.Joy,
+      "crazy joy",
+      "MyJoy",
+      "ForOtherJoy"
+    );
+  shareCodeObj.Sgmh &&
+    formatShareCodesForLinux(
+      shareCodeObj.Sgmh,
+      "闪购盲盒",
+      "MySgmh",
+      "ForOtherSgmh"
+    );
+  shareCodeObj.Jdcfd &&
+    formatShareCodesForLinux(
+      shareCodeObj.Jdcfd,
+      "京喜财富岛",
+      "MyJdcfd",
+      "ForOtherJdcfd"
+    );
+  shareCodeObj.Global &&
+    formatShareCodesForLinux(
+      shareCodeObj.Global,
+      "环球挑战赛",
+      "MyGlobal",
+      "ForOtherGlobal"
+    );
 }
 
 const formatShareCodesForLinux = (
