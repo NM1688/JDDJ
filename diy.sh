@@ -17,7 +17,7 @@ whyour
 moposmall
 qq34347476
 ZCY01
-Hydrahail
+cui521
 shuye72
 
 "
@@ -84,11 +84,11 @@ jd_priceProtect.js
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-############################## 维护:Hydrahail ##############################
+############################## 维护:cui521 ##############################
 # 库地址:https://github.com/Hydrahail-Johnson/diy_scripts
-scripts_base_url_7=https://ghproxy.com/https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/
+scripts_base_url_7=https://ghproxy.com/https://raw.githubusercontent.com/cui521/jdqd/main/
 my_scripts_list_7="
-shopsign.js
+DIY_shopsign.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -118,6 +118,7 @@ cd $ScriptsDir
 
 ############################## 手动删除失效脚本 ##############################
 rm -rf qq34347476_getShareCode_format.js
+rm -rf Hydrahail_shopsign.js
 
 index=1
 for author in $author_list
