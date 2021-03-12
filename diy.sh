@@ -70,7 +70,7 @@ jx_cfd_exchange.js
 # 库地址:https://github.com/qq34347476/js_script
 scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 my_scripts_list_5="
-getShareCode_format.js
+format_share_jd_code.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -117,7 +117,7 @@ rand(){
 cd $ScriptsDir
 
 ############################## 手动删除失效脚本 ##############################
-rm -rf qq34347476_format_share_jd_code.js
+rm -rf qq34347476_getShareCode_format.js
 
 index=1
 for author in $author_list
