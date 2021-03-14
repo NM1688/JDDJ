@@ -44,6 +44,7 @@ z_marketLottery.js
 z_superDay.js
 z_unionPoster.js
 jd_xmf.js
+z_wish.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
