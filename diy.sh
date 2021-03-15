@@ -72,7 +72,7 @@ jx_cfd_exchange.js
 scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 my_scripts_list_5="
 format_share_jd_code.js
-getShareCode_format.js
+#getShareCode_format.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
