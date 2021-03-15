@@ -72,6 +72,7 @@ jx_cfd_exchange.js
 scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 my_scripts_list_5="
 format_share_jd_code.js
+getShareCode_format.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -104,7 +105,7 @@ my_scripts_list_8="
 
 ############################ 是否强制替换脚本的定时 ############################
 # 设为"ture"时强制替换脚本的定时，设为"false"则不替换脚本的定时...
-Enablerenew="ture"
+Enablerenew="false"
 
 ############################## 随机函数 ##############################
 rand(){
@@ -114,13 +115,11 @@ rand(){
     echo $(($num%$max+$min))
 }
 
-############################## 下载脚本 ##############################
-cd $ScriptsDir
-
 ############################## 手动删除失效脚本 ##############################
-rm -rf qq34347476_getShareCode_format.js
-rm -rf Hydrahail_shopsign.js
+cd $ScriptsDir
+# rm -rf qq34347476_getShareCode_format.js
 
+############################## 开始下载脚本 ##############################
 index=1
 for author in $author_list
 do
