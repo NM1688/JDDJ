@@ -15,7 +15,6 @@ author_list="i-chenzhe moposmall whyour qq34347476 ZCY01 cui521"
 scripts_base_url_1=https://raw.githubusercontent.com/i-chenzhe/qx/main/
 scripts_base_url_2=https://raw.githubusercontent.com/moposmall/Script/main/Me/
 scripts_base_url_3=https://raw.githubusercontent.com/whyour/hundun/master/quanx/
-#scripts_base_url_4=https://gitee.com/qq34347476/quantumult-x/raw/master/
 scripts_base_url_4=https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 scripts_base_url_5=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/
 scripts_base_url_6=https://raw.githubusercontent.com/cui521/jdqd/main/
@@ -30,7 +29,7 @@ my_scripts_list_2="jx_cfd_exchange.js"
 # 维护:whyour       库地址:https://github.com/whyour/hundun/tree/master/quanx
 my_scripts_list_3="jd_zjd_tuan.js"
 
-# 维护:qq34347476   库地址:https://gitee.com/qq34347476/quantumult-x
+# 维护:qq34347476   库地址:https://github.com/qq34347476/js_script/tree/master/scripts
 my_scripts_list_4="format_share_jd_code.js"
 
 # 维护:ZCY01        库地址:https://github.com/ZCY01/daily_scripts/tree/main/jd
