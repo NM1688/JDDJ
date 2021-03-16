@@ -9,7 +9,7 @@ source /etc/profile
 
 ####################  作者列表  ###########################
 
-author_list="i-chenzhe moposmall whyour qq34347476 ZCY01 shuye72"
+author_list="i-chenzhe moposmall whyour qq34347476 ZCY01 cui521"
 
 #################### 作者脚本地址URL #######################
 scripts_base_url_1=https://raw.githubusercontent.com/i-chenzhe/qx/main/
@@ -18,8 +18,7 @@ scripts_base_url_3=https://raw.githubusercontent.com/whyour/hundun/master/quanx/
 #scripts_base_url_4=https://gitee.com/qq34347476/quantumult-x/raw/master/
 scripts_base_url_4=https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 scripts_base_url_5=https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/
-scripts_base_url_6=https://gitee.com/shuye72/MyActions/raw/main/
-scripts_base_url_7=https://raw.githubusercontent.com/cui521/jdqd/main/
+scripts_base_url_6=https://raw.githubusercontent.com/cui521/jdqd/main/
 
 #####################  作者脚本名称 ##########################
 #维护:i-chenzhe     库地址:https://github.com/i-chenzhe/qx
@@ -37,11 +36,8 @@ my_scripts_list_4="format_share_jd_code.js"
 # 维护:ZCY01        库地址:https://github.com/ZCY01/daily_scripts/tree/main/jd
 my_scripts_list_5=""
 
-# 维护:shuye72      库地址:https://gitee.com/shuye72/MyActions/tree/main ps:尽量不要使用此人脚本,
-my_scripts_list_6=""
-
 # 维护:cui521    库地址:https://github.com/cui521/jdqd/blob/main/
-my_scripts_list_7="DIY_shopsign.js"
+my_scripts_list_6="DIY_shopsign.js"
 
 ######################  是否使用本地代理  ######################
 Enableproxy="false"
