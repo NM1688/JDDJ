@@ -199,6 +199,19 @@ fi
 ############################## 更新群助力脚本 ##############################
 bash ${ConfigDir}/sharecode.sh
 
+############################## 恢复HomePage ##############################
+panelDir=${ShellDir}/panel/public
+cd $panelDir
+echo -e "恢复HomePage"
+wget -q --no-check-certificate https://gitee.com/qq34347476/quantumult-x/raw/master/pannel/public/home.html -O home.html.new
+if [ $? -eq 0 ]; then
+  mv -f home.html.new home.html
+  echo -e "恢复 home.html 成功!!!"
+else
+  rm -rf home.html.new
+  echo -e "恢复 home.html 失败...\n"
+fi
+
 ############################## 更新diy.sh ##############################
 cd $ConfigDir
 echo -e "开始更新 diy.sh "
