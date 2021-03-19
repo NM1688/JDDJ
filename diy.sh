@@ -5,7 +5,7 @@
 #                          自动拉取各个作者库内指定脚本
 #                   把此diy.sh放入config即可,会自动同步最新脚本
 #                    如有好用的脚本或者脚本更新不及时请@qiao112
-#                              2021年3月17日10:11
+#                              2021年3月19日23:36
 #                                                                            #
 ##############################################################################
 
@@ -18,7 +18,6 @@ moposmall
 qq34347476
 ZCY01
 cui521
-shuye72
 
 "
 ######################################################################
@@ -95,14 +94,6 @@ jd_priceProtect.js
 scripts_base_url_7=https://ghproxy.com/https://raw.githubusercontent.com/cui521/jdqd/main/
 my_scripts_list_7="
 DIY_shopsign.js
-
-"
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-############################## 维护:shuye72 ##############################
-# 库地址:https://gitee.com/shuye72/MyActions/tree/main ps:尽量不要使用此人脚本,
-scripts_base_url_8=https://gitee.com/shuye72/MyActions/raw/main/
-my_scripts_list_8="
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -209,10 +200,10 @@ echo -e "恢复HomePage"
 wget -q --no-check-certificate https://gitee.com/qq34347476/quantumult-x/raw/master/pannel/public/home.html -O home.html.new
 if [ $? -eq 0 ]; then
   mv -f home.html.new home.html
-  echo -e "恢复 home.html 成功!!!"
+  echo -e "恢复 HomePage 成功!!!"
 else
   rm -rf home.html.new
-  echo -e "恢复 home.html 失败...\n"
+  echo -e "恢复 HomePage 失败...\n"
 fi
 
 ############################## 更新diy.sh ##############################
