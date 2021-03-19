@@ -147,19 +147,19 @@ do
 	  if [ -z "${script_date}" ]; then
 	    cron_min=$(rand 1 59)
 	    cron_hour=$(rand 7 9)
-      [ $(grep -c "$croname" ${ConfigDir}/crontab.list) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname"  ${ConfigDir}/crontab.list
+      [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname"  /jd/config/crontab.list
 	  else
-	    check_existing_cron=`grep -c "$croname" ${ConfigDir}/crontab.list`
+	    check_existing_cron=`grep -c "$croname" /jd/config/crontab.list`
 	    echo $name "开始添加定时..."
 	    if [ "${check_existing_cron}" -eq 0 ]; then
-	      sed -i "/hangup/a${script_date} bash jd $croname"  ${ConfigDir}/crontab.list
+	      sed -i "/hangup/a${script_date} bash jd $croname"  /jd/config/crontab.list
 	      echo -e "$name 成功添加定时!!!\n"
 	    else
 	      if [ "${Enablerenew}" = "true" ]; then
 	      	echo -e "检测到"$name"定时已存在开始替换...\n"
-	        grep -v "$croname" ${ConfigDir}/crontab.list > output.txt
-		      mv -f output.txt ${ConfigDir}/crontab.list
-		      sed -i "/hangup/a${script_date} bash jd $croname"  ${ConfigDir}/crontab.list
+	        grep -v "$croname" /jd/config/crontab.list > output.txt
+		      mv -f output.txt /jd/config/crontab.list
+		      sed -i "/hangup/a${script_date} bash jd $croname"  /jd/config/crontab.list
 	        echo -e "替换"$name"定时成功!!!"
 	      else
 	        echo -e "$name 存在定时,已选择不替换...\n"
@@ -170,11 +170,11 @@ do
       [ -f $name.new ] && rm -f $name.new
       echo -e "$name 脚本失效,已删除脚本...\n"
       croname=`echo "$name"|awk -F\. '{print $1}'`
-      check_existing_cron=`grep -c "$croname" ${ConfigDir}/crontab.list`
+      check_existing_cron=`grep -c "$croname" /jd/config/crontab.list`
       if [ "${check_existing_cron}" -ne 0 ]; then
-        grep -v "$croname" ${ConfigDir}/crontab.list > output.txt
-        mv -f output.txt ${ConfigDir}/crontab.list
-        echo -e \b"检测到"$name"残留文件..."
+        grep -v "$croname" /jd/config/crontab.list > output.txt
+        mv -f output.txt /jd/config/crontab.list
+        echo -e "检测到"$name"残留文件..."
         rm -f ${name:-default}
         echo -e "开始清理"$name"残留文件..."
         cd $LogDir
