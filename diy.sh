@@ -47,6 +47,8 @@ jd_xmf.js
 z_wish.js
 z_lenovo.js
 z_mother_jump.js
+z_mgold.js
+z_super5g.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
