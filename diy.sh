@@ -157,8 +157,8 @@ do
 	    else
 	      if [ "${Enablerenew}" = "true" ]; then
 	      	echo -e "检测到"$name"定时已存在开始替换...\n"
-	        grep -v "$croname" /jd/config/crontab.list > output.txt
-		      mv -f output.txt /jd/config/crontab.list
+	        grep -v "$croname" ${ConfigDir}/crontab.list > output.txt
+		      mv -f output.txt ${ConfigDir}/crontab.list
 		      sed -i "/hangup/a${script_date} bash jd $croname"  ${ConfigDir}/crontab.list
 	        echo -e "替换"$name"定时成功!!!"
 	      else
