@@ -25,13 +25,12 @@ my_scripts_list_1="
 jd_entertainment.js 
 jd_fanslove.js 
 jd_shake.js 
-jd_gjmh.js 
+jd_xmf.js 
 jd_shakeBean.js 
 z_marketLottery.js 
 z_superDay.js 
 z_unionPoster.js 
 z_mother_jump.js 
-jd_xmf.js 
 z_wish.js 
 z_lenovo.js 
 z_super5g.js 
