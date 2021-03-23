@@ -23,8 +23,9 @@ scripts_base_url_6=https://raw.githubusercontent.com/cui521/jdqd/main/
 #维护:i-chenzhe     库地址:https://github.com/i-chenzhe/qx
 my_scripts_list_1="
 jd_entertainment.js 
-jd_fanslove.js jd_shake.
-js jd_gjmh.js 
+jd_fanslove.js 
+jd_shake.js 
+jd_gjmh.js 
 jd_shakeBean.js 
 z_marketLottery.js 
 z_superDay.js 
