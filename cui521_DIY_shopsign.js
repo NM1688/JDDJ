@@ -1,7 +1,7 @@
 /*
 店铺签到，各类店铺签到，有新的店铺直接添加token即可
 */
-const $ = new Env('店铺签到');
+const $ = new Env('希望可以拉入水果群群@cuijian521a');
 
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
