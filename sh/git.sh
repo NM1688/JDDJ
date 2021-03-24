@@ -37,6 +37,7 @@ z_super5g.js
 z_mgold.js 
 z_oneplus.js
 z_grassy.js
+z_sister.js
 
 " 
 
