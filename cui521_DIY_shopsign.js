@@ -1,7 +1,7 @@
 /*
 店铺签到，各类店铺签到，有新的店铺直接添加token即可
 */
-const $ = new Env('店铺签到 应用户要求设置私有·可能是不开放了');
+const $ = new Env('店铺签到应用户要求设置私有可能是不开放了');
 
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
