@@ -38,6 +38,7 @@ z_mgold.js
 z_oneplus.js
 z_grassy.js
 z_sister.js
+z_xmf.js
 
 " 
 
