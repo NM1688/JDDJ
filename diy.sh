@@ -93,7 +93,7 @@ jd_priceProtect.js
 # 库地址:https://github.com/Hydrahail-Johnson/diy_scripts
 scripts_base_url_7=https://ghproxy.com/https://raw.githubusercontent.com/cui521/jdqd/main/
 my_scripts_list_7="
-DIY_shopsign.js
+
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
