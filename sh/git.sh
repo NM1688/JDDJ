@@ -55,7 +55,7 @@ my_scripts_list_4="format_share_jd_code.js"
 my_scripts_list_5=""
 
 # 维护:cui521    库地址:https://github.com/cui521/jdqd/blob/main/
-my_scripts_list_6="DIY_shopsign.js"
+my_scripts_list_6=""
 
 ######################  是否使用本地代理  ######################
 Enableproxy="false"
