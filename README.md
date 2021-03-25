@@ -3,6 +3,14 @@
 ## 介绍
 本库是用来同步大佬们的自定义js脚本，本人并不做任何脚本修改，保证原作者脚本的原汁原味  
 
+##  感谢
+
+感谢以下大佬们的无偿分享，让我们才能使用这么多的免费脚本，在此表示感谢。
+
+请关注原作者的github，并打赏原作者支持作者不断更新。
+
+[Tartarus2014](https://github.com/Tartarus2014/)，[i-chenzhe](https://github.com/i-chenzhe/)，[whyour](https://github.com/whyour/)，[moposmall](https://github.com/moposmall/)，[qq34347476](https://github.com/qq34347476/)，[ZCY01](https://github.com/ZCY01/)，[cui521](https://github.com/cui521/)
+
 ### 安装教程
 
 修改自己的diy.sh文件，将本库地址添加到订阅目录  
