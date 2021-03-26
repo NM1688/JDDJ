@@ -33,22 +33,7 @@ my_scripts_list_1="
 ############################## 维护:i-chenzhe ##############################
 # 库地址:https://github.com/i-chenzhe/qx
 scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/i-chenzhe/qx/main/
-#my_scripts_list_2="
-jd_entertainment.js
-jd_fanslove.js
-jd_shake.js
-z_marketLottery.js
-z_unionPoster.js
-z_wish.js
-z_lenovo.js
-z_mother_jump.js
-z_mgold.js
-z_super5g.js
-z_city_cash.js
-z_oneplus.js
-z_grassy.js
-z_sister.js
-z_xmf.js
+my_scripts_list_2="
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
