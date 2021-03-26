@@ -33,7 +33,7 @@ my_scripts_list_1="
 ############################## 维护:i-chenzhe ##############################
 # 库地址:https://github.com/i-chenzhe/qx
 scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/i-chenzhe/qx/main/
-my_scripts_list_2="
+#my_scripts_list_2="
 jd_entertainment.js
 jd_fanslove.js
 jd_shake.js
@@ -91,7 +91,7 @@ jd_priceProtect.js
 
 ############################## 维护:cui521 ##############################
 # 库地址:https://github.com/cui521/jdqd
-scripts_base_url_7=https://raw.githubusercontent.com/cui521/bilibili/main2/BiliClient/
+scripts_base_url_7=https://ghproxy.com/https://raw.githubusercontent.com/cui521/bilibili/main2/BiliClient/
 my_scripts_list_7="
 DIY_shopsign.js
 
