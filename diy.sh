@@ -31,9 +31,20 @@ my_scripts_list_1="
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ############################## 维护:i-chenzhe ##############################
-# 库地址:https://github.com/i-chenzhe/qx
-scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/i-chenzhe/qx/main/
+# 库地址:https://github.com/monk-coder/dust/i-chenzhe
+scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/
 my_scripts_list_2="
+z_entertainment.js
+z_fanslove.js
+z_getFanslove.js
+z_lenovo.js
+z_marketLottery.js
+z_mother_jump.js
+z_oneplus.js
+z_shake.js
+z_super5g.js
+z_unionPoster.js
+z_xmf.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
