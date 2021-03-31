@@ -44,7 +44,7 @@ my_scripts_list_6=""
 Enableproxy="false"
 
 ######################### 脚本保存位置 #########################   
-cd /etc/github/old_repo/diy_scripts/
+cd /etc/github/old_repo/diy_scripts/js
 index=1
 
 for author in $author_list
