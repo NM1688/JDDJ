@@ -18,6 +18,7 @@ moposmall
 qq34347476
 ZCY01
 cui521
+monk-coder
 
 "
 ######################################################################
@@ -30,20 +31,16 @@ my_scripts_list_1="
 "
 
 ############################## 维护:i-chenzhe ##############################
-# 库地址:https://github.com/monk-coder/dust/i-chenzhe
+# 库地址:https://github.com/monk-coder/dust/tree/dust/i-chenzhe
 scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/
 my_scripts_list_2="
 z_entertainment.js
 z_fanslove.js
 z_getFanslove.js
-z_lenovo.js
 z_marketLottery.js
 z_mother_jump.js
-z_oneplus.js
 z_shake.js
 z_super5g.js
-z_unionPoster.js
-z_xmf.js
 
 "
 
@@ -68,6 +65,7 @@ jx_cfd_exchange.js
 scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 my_scripts_list_5="
 format_share_jd_code.js
+getShareCode_format.js
 jd_try.js
 
 "
@@ -88,6 +86,15 @@ DIY_shopsign.js
 
 "
 
+############################## 维护:monk-coder ##########################
+# 库地址:https://github.com/monk-coder/dust/tree/dust/normal
+scripts_base_url_8=https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/normal/
+my_scripts_list_8="
+monk_inter_shop_sign.js
+monk_shop_follow_sku.js
+monk_shop_lottery.js
+
+"
 ############################ 是否强制替换脚本的定时 ############################
 # 设为"true"时强制替换脚本的定时，设为"false"则不替换脚本的定时...
 Enablerenew="false"
