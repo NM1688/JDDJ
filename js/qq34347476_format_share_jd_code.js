@@ -11,12 +11,14 @@
 只支持nodejs
 
 #获取互助码并格式化/docker自动更新容器下所有账号互助码
-55 23 * * * https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js, tag=获取互助码并格式化/docker自动更新容器下所有账号互助码, img-url=https://raw.githubusercontent.com/yogayyy/task/master/huzhucode.png, enabled=true
+55 11,23 * * * https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/format_share_jd_code.js, tag=获取互助码并格式化/docker自动更新容器下所有账号互助码, img-url=https://raw.githubusercontent.com/yogayyy/task/master/huzhucode.png, enabled=true
 
  */
 const $ = new Env("获取互助码并格式化/docker自动更新容器下所有账号互助码");
 const notifyMsg = `
-优化算法\n
+修复bug并移除 机器人格式化\n
+机器人格式化分离单独脚本
+https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/submit_codes.js
 \n
 新手写脚本难免有BUG，做好配置备份
 有问题随时git留言
