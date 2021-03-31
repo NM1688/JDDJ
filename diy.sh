@@ -67,6 +67,7 @@ my_scripts_list_5="
 format_share_jd_code.js
 getShareCode_format.js
 jd_try.js
+submit_codes.js 
 
 "
 
