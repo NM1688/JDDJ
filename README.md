@@ -18,6 +18,9 @@ https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/
 
 ### 使用说明
 适用于Docker2教程，需要修改diy.sh文件
+**注意**：适用V3以下版本docker，包括如下镜像：
+nevinee/jd:gitee，noobx/jd:py，noobx/jd:gitee，whyour/qinglong:latest
+不适用于V4版本docker，如nevinee/jd:v4，遇到问题别找我，自行探索
 
 #### 修改diy.sh
 从网页上复制diy.sh文件的内容，在web面板中替换自己原有的自定义任务后，保存修改。
