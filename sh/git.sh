@@ -32,7 +32,7 @@ my_scripts_list_2="jx_cfd_exchange.js"
 my_scripts_list_3="jd_zjd_tuan.js"
 
 # 维护:qq34347476   库地址:https://github.com/qq34347476/js_script/tree/master/scripts
-my_scripts_list_4="format_share_jd_code.js getShareCode_format.js"
+my_scripts_list_4="format_share_jd_code.js getShareCode_format.js jd_try.js submit_codes.js"
 
 # 维护:ZCY01        库地址:https://github.com/ZCY01/daily_scripts/tree/main/jd
 my_scripts_list_5=""
