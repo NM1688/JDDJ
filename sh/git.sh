@@ -22,23 +22,6 @@ scripts_base_url_6=https://raw.githubusercontent.com/cui521/jdqd/main/
 #####################  作者脚本名称 ##########################
 #维护:i-chenzhe     库地址:https://github.com/i-chenzhe/qx
 my_scripts_list_1="
-jd_entertainment.js 
-jd_fanslove.js 
-jd_shake.js 
-jd_xmf.js 
-jd_shakeBean.js 
-z_marketLottery.js 
-z_superDay.js 
-z_unionPoster.js 
-z_mother_jump.js 
-z_wish.js 
-z_lenovo.js 
-z_super5g.js 
-z_mgold.js 
-z_oneplus.js
-z_grassy.js
-z_sister.js
-z_xmf.js
 
 " 
 
@@ -49,7 +32,7 @@ my_scripts_list_2="jx_cfd_exchange.js"
 my_scripts_list_3="jd_zjd_tuan.js"
 
 # 维护:qq34347476   库地址:https://github.com/qq34347476/js_script/tree/master/scripts
-my_scripts_list_4="format_share_jd_code.js"
+my_scripts_list_4="format_share_jd_code.js getShareCode_format.js"
 
 # 维护:ZCY01        库地址:https://github.com/ZCY01/daily_scripts/tree/main/jd
 my_scripts_list_5=""
