@@ -1,24 +1,30 @@
 /*
-获取互助码
-
-更新地址：https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jd_submit_code.js
+一键获取我仓库所有需要互助类脚本的互助码(邀请码)(其中京东赚赚jd_jdzz.js如果今天达到5人助力则不能提取互助码)
+没必要设置(cron)定时执行，需要的时候，自己手动执行一次即可
+注：临时活动的互助码不添加到此处，如有需要请手动运行对应临时活动脚本
+更新地址：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_get_share_code.js
+已支持IOS双京东账号, Node.js支持N个京东账号
+脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #获取互助码
-30 0 * * * https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jd_submit_code.js, tag=获取互助码,  enabled=true
+20 13 * * 6 https://gitee.com/lxk0301/jd_scripts/raw/master/jd_get_share_code.js, tag=获取互助码, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+
 ================Loon==============
 [Script]
-cron "30 0 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jd_submit_code.js,tag=获取互助码
+cron "20 13 * * 6" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_get_share_code.js, tag=获取互助码
+
 ===============Surge=================
-获取互助码 = type=cron,cronexp="30 0 * * *",wake-system=1,timeout=3600,script-path=https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jd_submit_code.js
+获取互助码 = type=cron,cronexp="20 13 * * 6",wake-system=1,timeout=3600,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_get_share_code.js
+
 ============小火箭=========
-获取互助码 = type=cron,script-path=https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jd_submit_code.js, cronexpr="30 0 * * *", timeout=3600, enable=true
-*/
+获取互助码 = type=cron,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_get_share_code.js, cronexpr="20 13 * * 6", timeout=3600, enable=true
+ */
 const $ = new Env("获取互助码");
 const JD_API_HOST = "https://api.m.jd.com/client.action";
 let cookiesArr = [], cookie = '', message;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const BASE_URL = "http://106.13.212.194/jd/"
+const BASE_URL = "http://hei.aouy.top:8081/jd/"
 !function (n) {
   "use strict";
 
@@ -541,39 +547,6 @@ async function getJdZZ() {
   await getUserInfo()
 }
 
-// 环球挑战赛
-async function getGlobal() {
-  return new Promise(resolve => {
-    $.get(globalTaskUrl("myTask", {"activityCode": 'visa-card-001'}), async (err, resp, data) => {
-      try {
-        if (err) {
-          console.log(`${JSON.stringify(err)}`)
-          console.log(`${$.name} API请求失败，请检查网路重试`)
-        } else {
-          if (safeGet(data)) {
-            data = JSON.parse(data);
-            if (data['code'] === '0') {
-              const {timeLimitTask, commonTask} = data.result.data
-              let task = [...timeLimitTask, ...commonTask]
-              for (let vo of task) {
-                if (vo['taskName'] === '每日邀请好友') {
-                  console.log(`【账号${$.index}（${$.nickName || $.UserName}环球挑战赛${vo['jingCommand']['keyOpenapp'].match(/masterPin":"(.*)","/)[1]}`);
-                  // console.log(`您的好友助力码为 ${vo['jingCommand']['keyOpenapp'].match(/masterPin":"(.*)","/)[1]}`)
-                  sendCode('jdglobal', `${vo['jingCommand']['keyOpenapp'].match(/masterPin":"(.*)","/)[1]}`);
-                }
-              }
-            }
-          }
-        }
-      } catch (e) {
-        $.logErr(e, resp)
-      } finally {
-        resolve(data);
-      }
-    })
-  })
-}
-
 function globalTaskUrl(function_id, body = {}) {
   return {
     url: `https://api.m.jd.com//client.action?functionId=${function_id}&body=${escape(JSON.stringify(body))}&appid=global_mart&time=${new Date().getTime()}`,
@@ -735,34 +708,6 @@ async function getJDFruit() {
   await jdFruit();
 }
 
-async function getCity() {
-  let body = {"lbsCity":"12","realLbsCity":"904","inviteId":'',"headImg":"","userName":""}
-  return new Promise((resolve) => {
-    $.post(taskPostUrl("city_getHomeData",body), async (err, resp, data) => {
-      try {
-        if (err) {
-          console.log(`${JSON.stringify(err)}`)
-          console.log(`${$.name} API请求失败，请检查网路重试`)
-        } else {
-          if (safeGet(data)) {
-            data = JSON.parse(data);
-            if (data.data && !data.data.result.userActBaseInfo.inviteId) {
-              console.log(`账号已黑，看不到邀请码`);
-            } else {
-              console.log(`【账号${$.index}（${$.nickName || $.UserName}）城城领现金】${data.data && data.data.result.userActBaseInfo.inviteId}`)
-              sendCode('city', `${data.data && data.data.result.userActBaseInfo.inviteId}`)
-            }
-          }
-        }
-      } catch (e) {
-        $.logErr(e, resp)
-      } finally {
-        resolve(data);
-      }
-    })
-  })
-}
-
 async function getJoy(){
   function taskUrl(functionId, body = '') {
     let t = Date.now().toString().substr(0, 10)
@@ -845,6 +790,41 @@ async function getSgmh(timeout = 0) {
   })
 }
 
+async function getMoHe() {
+  return new Promise((resolve) => {
+    const options = {
+      'url': `https://isp5g.m.jd.com/active/shareUrl?t=${Date.now()}`,
+      'headers': {
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
+        "content-type": "application/x-www-form-urlencoded",
+        "cookie": cookie,
+        "referer": "https://isp5g.m.jd.com",
+        "User-Agent": $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : (require('./USER_AGENTS').USER_AGENT)) : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1")
+      }
+    }
+    $.get(options, async (err, resp, data) => {
+      try {
+        // console.log('好友邀请码', data)
+        data = JSON.parse(data);
+        if (data['code'] === 5000) {
+          console.log(`重新运行一次脚本即可获取好友邀请码`)
+        }
+        // console.log('homeGoBrowse', data)
+        if (data['code'] === 200) {
+          console.log(`【账号${$.index}（${$.nickName || $.UserName}）超级魔盒】${data['data']}`)
+          sendCode('mohe', `${data['data']}`)
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      } finally {
+        resolve();
+      }
+    })
+  })
+}
+
 async function getShareCode() {
   console.log(`======账号${$.index}开始======`)
   await getJdFactory()
@@ -857,9 +837,8 @@ async function getShareCode() {
   await getJoy()
   await getSgmh()
   await getCash()
-  await getGlobal()
   await getCFD()
-  await getCity()
+  await getMoHe()
   console.log(`======账号${$.index}结束======\n`)
 }
 
