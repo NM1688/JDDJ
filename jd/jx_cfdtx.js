@@ -1,36 +1,19 @@
-/**
-*
-  Name:财富岛提现
-  Address: 京喜App ====>>>> 全民赚大钱
+/*
+京喜财富岛提现
 
- * 获取京喜tokens方式
- * 打开京喜农场，手动完成任意任务，必须完成任务领到水滴，提示获取cookie成功
- * 打开京喜工厂，收取电力，提示获取cookie成功
- * 打开京喜财富岛，手动成功提现一次，提示获取cookie成功
- * 手动任意完成，提示获取cookie成功即可，然后退出跑任务脚本
-
-  hostname = wq.jd.com, m.jingxi.com
-
-  # quanx
-  [rewrite_local]
-  ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
-  ^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
-  ^https\:\/\/m\.jingxi\.com\/jxcfd\/consume\/CashOut url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
-
-  # loon
-  [Script]
-  http-request ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js, requires-body=false, timeout=10, tag=京喜token
-  http-request ^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js, requires-body=false, timeout=10, tag=京喜token
-  http-request ^^https\:\/\/m\.jingxi\.com\/jxcfd\/consume\/CashOut script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js, requires-body=false, timeout=10, tag=京喜token
-
-  # surge
-  [Script]
-  京喜token = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
-  京喜token = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
-  京喜token = type=http-request,pattern=^https\:\/\/m\.jingxi\.com\/jxcfd\/consume\/CashOut,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
-
-*
-**/
+更新地址：https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jx_cfdtx.js
+============Quantumultx===============
+[task_local]
+#京喜财富岛提现
+0 0 * * * https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jx_cfdtx.js, tag=京喜财富岛提现,  enabled=true
+================Loon==============
+[Script]
+cron "0 0 * * *" script-path=https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jx_cfdtx.js,tag=京喜财富岛提现
+===============Surge=================
+京喜财富岛提现 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=3600,script-path=https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jx_cfdtx.js
+============小火箭=========
+京喜财富岛提现 = type=cron,script-path=https://ghproxy.com/https://raw.githubusercontent.com/ljhnchina/docker/main/jd/jx_cfdtx.js, cronexpr="0 0 * * *", timeout=3600, enable=true
+*/
 
 const $ = new Env("京喜财富岛提现");
 const JD_API_HOST = "https://m.jingxi.com/";
