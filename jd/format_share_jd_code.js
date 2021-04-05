@@ -44,29 +44,9 @@ if (!$.isNode()) {
 
   fs.readFile(Cookiefile, "utf-8", function (err, data) {
     if (err) {
-      return console.log(err);
-    }
-    const CookieReg = /Cookie\d+=/g;
-    $.number = data.match(CookieReg).length;
-  });
-
-  let filePath = path.resolve(__dirname, "../config/config");
-  let readDir = fs.readdirSync(filePath).reverse();
-  let fileName;
-
-  if (readDir && readDir.length > 0) {
-    fileName = readDir[0];
-  } else {
-    console.log("没有生成日志");
-  }
-
-  // 读取日志
-  let file = path.resolve(__dirname, filePath, fileName);
-  fs.readFile(file, "utf-8", function (err, data) {
-    if (err) {
       console.error(err);
     } else {
-      console.log("读取export_sharecodes日志成功");
+      console.log("读取成功");
 
       // 按 互助码  分割
       let arr = data
