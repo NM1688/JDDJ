@@ -87,7 +87,7 @@ if (!$.isNode()) {
 }
 
 // 通用格式化
-const getCodes = (name,data) => {
+const exportShareCodes = (name,data) => {
       const reg = new RegExp(`(${name}\\d+=)([A-Za-z0-9=\\-_{}:"',]+)`, "gim");
       let arr = data.match(reg)
       if(!arr) {
