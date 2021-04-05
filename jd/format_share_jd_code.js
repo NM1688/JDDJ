@@ -42,7 +42,7 @@ if (!$.isNode()) {
   // 判断需要生成 ForOther的个数
   let file = path.resolve(__dirname, "../config/config.sh");
 
-  fs.readFile(Cookiefile, "utf-8", function (err, data) {
+  fs.readFile(file, "utf-8", function (err, data) {
     if (err) {
       console.error(err);
     } else {
