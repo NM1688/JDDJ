@@ -189,7 +189,7 @@ else
 fi
 
 ############################## 更新群助力脚本 ##############################
-bash ${ConfigDir}/sharecode.sh
+bash ${ConfigDir}/qunsharecode.sh
 
 ############################## 恢复HomePage ##############################
 panelDir=${ShellDir}/panel/public
