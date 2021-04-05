@@ -5,14 +5,14 @@
 ============Quantumultx===============
 [task_local]
 #获取互助码并格式化
-55 23 * * * https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, tag=获取互助码并格式化,  enabled=true
+5 0 * * * https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, tag=获取互助码并格式化,  enabled=true
 ================Loon==============
 [Script]
-cron "55 23 * * *" script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js,tag=获取互助码并格式化
+cron "5 0 * * *" script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js,tag=获取互助码并格式化
 ===============Surge=================
-获取互助码并格式化 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js
+获取互助码并格式化 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js
 ============小火箭=========
-获取互助码并格式化 = type=cron,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, cronexpr="55 23 * * *", timeout=3600, enable=true
+获取互助码并格式化 = type=cron,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, cronexpr="5 0 * * *", timeout=3600, enable=true
 */
 const $ = new Env("获取互助码并格式化/docker自动更新容器下所有账号互助码");
 const notifyMsg = `
