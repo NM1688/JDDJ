@@ -1,7 +1,7 @@
 /*
 为了今后维护方便，重构二维码获取途径
 此处格式化的互助码来源于 log/jd_get_share_code 目录中的输出日志
-如果没有显示内容，请等待定时脚本的执行，或手动执行 jcode.sh
+如果没有显示内容，请等待定时脚本的执行，或手动执行 jd_submit_code
 如还是没有可使用 可使用manual-update.sh 脚本生成run-all  一键快速启动所有脚本
 
 详细配置使用说明 查看 https://github.com/qq34347476/js_script/wiki/format_share_jd_code
@@ -50,14 +50,14 @@ if (!$.isNode()) {
     $.number = data.match(CookieReg).length;
   });
 
-  let filePath = path.resolve(__dirname, "../log/jcode");
+  let filePath = path.resolve(__dirname, "../log/jd_submit_code");
   let readDir = fs.readdirSync(filePath).reverse();
   let fileName;
 
   if (readDir && readDir.length > 0) {
     fileName = readDir[0];
   } else {
-    console.log("没有生成日志，请手动运行 jcode.sh");
+    console.log("没有生成日志，请手动运行 jd_submit_code.js");
   }
 
   // 读取日志
@@ -66,7 +66,7 @@ if (!$.isNode()) {
     if (err) {
       console.error(err);
     } else {
-      console.log("读取jcode日志成功");
+      console.log("读取jd_submit_code日志成功");
 
       // 按 互助码  分割
       let arr = data
