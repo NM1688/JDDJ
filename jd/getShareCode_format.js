@@ -1,16 +1,19 @@
 /*
-jd_get_share_code 日志 专用
+获取互助码并格式化
 
-详细配置使用说明 查看 https://github.com/qq34347476/js_script/wiki/format_share_jd_code
-
-注意位置脚本会 替换 两个 # format_share_jd_code 中间部分所有内容
-
-只支持nodejs
-
-#获取互助码并格式化/docker自动更新容器下所有账号互助码
-55 23 * * * https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js, tag=获取互助码并格式化/docker自动更新容器下所有账号互助码, img-url=https://raw.githubusercontent.com/yogayyy/task/master/huzhucode.png, enabled=true
-
- */
+更新地址：https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js
+============Quantumultx===============
+[task_local]
+#获取互助码并格式化
+55 23 * * * https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, tag=获取互助码并格式化,  enabled=true
+================Loon==============
+[Script]
+cron "55 23 * * *" script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js,tag=获取互助码并格式化
+===============Surge=================
+获取互助码并格式化 = type=cron,cronexp="55 23 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js
+============小火箭=========
+获取互助码并格式化 = type=cron,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, cronexpr="55 23 * * *", timeout=3600, enable=true
+*/
 const $ = new Env("获取互助码并格式化/docker自动更新容器下所有账号互助码");
 const notifyMsg = `
 读取 jd_get_share_code 日志 版本专用
