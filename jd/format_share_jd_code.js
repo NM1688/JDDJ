@@ -66,7 +66,7 @@ if (!$.isNode()) {
     if (err) {
       console.error(err);
     } else {
-      console.log("读取export_sharecodes日志成功");
+      console.log("读取jcode日志成功");
 
       // 按 互助码  分割
       let arr = data
