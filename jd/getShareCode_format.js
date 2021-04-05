@@ -5,14 +5,14 @@
 ============Quantumultx===============
 [task_local]
 #获取互助码并格式化
-5 0 * * * https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, tag=获取互助码并格式化,  enabled=true
+0 1 * * * https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, tag=获取互助码并格式化,  enabled=true
 ================Loon==============
 [Script]
-cron "5 0 * * *" script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js,tag=获取互助码并格式化
+cron "0 1 * * *" script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js,tag=获取互助码并格式化
 ===============Surge=================
-获取互助码并格式化 = type=cron,cronexp="5 0 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js
+获取互助码并格式化 = type=cron,cronexp="0 1 * * *",wake-system=1,timeout=3600,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js
 ============小火箭=========
-获取互助码并格式化 = type=cron,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, cronexpr="5 0 * * *", timeout=3600, enable=true
+获取互助码并格式化 = type=cron,script-path=https://gitee.com/jiandjh/docker/raw/main/jd/getShareCode_format.js, cronexpr="0 1 * * *", timeout=3600, enable=true
 */
 const $ = new Env("获取互助码并格式化/docker自动更新容器下所有账号互助码");
 const notifyMsg = `
@@ -80,6 +80,7 @@ if (!$.isNode()) {
       $.shareCodeObj.Kdsd = exportShareCodes(str, "口袋书店】");
       $.shareCodeObj.Jdzz = exportShareCodes(str, "的京东赚赚好友互助码】");
       $.shareCodeObj.Global = exportShareCodes(str, "环球挑战赛】");
+	  $.shareCodeObj.Carni = exportShareCodes(str, "京东手机狂欢城】");
 
       showFormatMsg($.shareCodeObj);
       exportLog();
@@ -154,10 +155,10 @@ function showFormatMsg(shareCodeObj) {
         shareCodeObj.Sgmh
       ).join("&")}\n`
     );
-  shareCodeObj.Cfd &&
+  shareCodeObj.Jdcfd &&
     console.log(
-      `/submit_activity_codes jxcfd ${getRandomArrayElements(
-        shareCodeObj.Cfd
+      `/submit_activity_codes Jdcfd ${getRandomArrayElements(
+        shareCodeObj.Jdcfd
       ).join("&")}\n`
     );
 
@@ -261,6 +262,13 @@ function showFormatMsg(shareCodeObj) {
       "MyJdzz",
       "ForOtherJdzz"
     );
+  // 	shareCodeObj.Carni &&
+   //    formatShareCodesForLinux(
+   //      shareCodeObj.Carni,
+   //      "京东手机狂欢城",
+  //       "MyCarni",
+   //      "ForOtherJdzz"
+   //    );
 }
 
 const formatShareCodesForLinux = (
