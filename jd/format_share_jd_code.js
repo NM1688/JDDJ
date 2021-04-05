@@ -40,7 +40,7 @@ if (!$.isNode()) {
   }
 
   // 判断需要生成 ForOther的个数
-  const Cookiefile = path.resolve(__dirname, "../config/config.sh");
+  let file = path.resolve(__dirname, "../config/config.sh");
 
   fs.readFile(Cookiefile, "utf-8", function (err, data) {
     if (err) {
@@ -50,14 +50,14 @@ if (!$.isNode()) {
     $.number = data.match(CookieReg).length;
   });
 
-  let filePath = path.resolve(__dirname, "../config/config.sh");
+  let filePath = path.resolve(__dirname, "../config/config");
   let readDir = fs.readdirSync(filePath).reverse();
   let fileName;
 
   if (readDir && readDir.length > 0) {
     fileName = readDir[0];
   } else {
-    console.log("没有生成日志，请手动运行 bash jd/config/config.sh");
+    console.log("没有生成日志");
   }
 
   // 读取日志
