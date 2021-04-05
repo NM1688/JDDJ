@@ -87,39 +87,19 @@ if (!$.isNode()) {
 }
 
 // 通用格式化
-const exportShareCodes = (arr, zhName) => {
-  const resShareCodeArr = [];
-  arr &&
-    arr.forEach((item) => {
-      if (item.startsWith(zhName)) {
-        const keyReg = /(账号)(\d+)(（)/g;
-        let keyStr = item.match(keyReg)
-        if(!keyStr) {
-          return
-        }
-        keyStr = keyStr.join("★");
-        keyStr = keyStr.replace(keyReg,'$2')
-        const valueReg = /(】)([A-Za-z0-9=\-_{}:"',]+)/g;
-        let valueStr = item.match(valueReg)
-        if(!valueStr) {
-          return
-        }
-        valueStr = valueStr.join('★')
-        valueStr = valueStr.replace(valueReg, "$2");
-        const keyArr = keyStr.split("★");
-        const valueArr = valueStr.split("★");
-
-        keyArr && keyArr.forEach((item, index) => {
-          resShareCodeArr.push({
-            key: item,
-            value: valueArr[index],
-          });
-        });
-        // console.log(resShareCodeArr);
+const getCodes = (name,data) => {
+      const reg = new RegExp(`(${name}\\d+=)([A-Za-z0-9=\\-_{}:"',]+)`, "gim");
+      let arr = data.match(reg)
+      if(!arr) {
+        return
       }
-    });
-  return resShareCodeArr;
-};
+      let str = arr.join("★");
+      str = str.replace(reg, "$2");
+      arr = str.split("★");
+      return arr.map(item => {
+        return item.slice(1,-1)
+      })
+}
 
 function showFormatMsg(shareCodeObj) {
   console.log(
