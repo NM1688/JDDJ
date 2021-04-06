@@ -8,7 +8,7 @@
 
  === 圈X
  圈X最多支持分钟维度, 更新: 10分钟执行一次
- 0/1 * * * * https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/jd_crazy_joy_compose.js, tag=crazyJoy金币任务, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_crazy_joy.png, enabled=true
+ 0/1 * * * * https://gitee.com/jiandjh/docker/raw/main/jd/jd_crazy_joy_collect.js
 
  ***/
 
