@@ -594,7 +594,7 @@ var randomCount = 6
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: `http://hei.aouy.top:8081/jd/code/read/joy/${randomCount}/`, 'timeout': 10000}, (err, resp, data) => {
+    $.get({url: `http://zl.aouy.top:8081/jd/code/read/joy/${randomCount}/`, 'timeout': 10000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
@@ -618,7 +618,7 @@ function readShareCode() {
 
 function getLKYLToken() {
   return new Promise(async resolve => {
-    $.get({url: `http://106.13.212.194/jd/code//lkyl/get`, 'timeout': 10000}, (err, resp, data) => {
+    $.get({url: `http://zl.aouy.top:8081/jd/code/lkyl/get`, 'timeout': 10000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
