@@ -9,7 +9,9 @@
 
 请关注原作者的github，并打赏原作者支持作者不断更新。
 
-[Tartarus2014](https://github.com/Tartarus2014/)，[monk-coder](https://github.com/monk-coder/)，[i-chenzhe](https://github.com/monk-coder/dust/tree/dust/i-chenzhe/)，[whyour](https://github.com/whyour/)，[moposmall](https://github.com/moposmall/)，[qq34347476](https://github.com/qq34347476/)，[ZCY01](https://github.com/ZCY01/)，[cui521](https://github.com/cui521/),[sparkssssssss](https://github.com/sparkssssssss/)
+[Tartarus2014](https://github.com/Tartarus2014/)，[monk-coder](https://github.com/monk-coder/)，[i-chenzhe](https://github.com/monk-coder/dust/tree/dust/i-chenzhe/)，[whyour](https://github.com/whyour/)，[moposmall](https://github.com/moposmall/)
+
+[qq34347476](https://github.com/qq34347476/)，[ZCY01](https://github.com/ZCY01/)，[cui521](https://github.com/cui521/)，[sparkssssssss](https://github.com/sparkssssssss/)
 
 ### 使用说明
 
