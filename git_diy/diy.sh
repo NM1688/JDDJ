@@ -7,11 +7,11 @@
 # 2021年3月24日18:23
 
 ############################## 更新群助力脚本 ##############################
-bash /jd/config/sharecode.sh
+bash /jd/config/qunsharecode.sh
 
 ############################## 使用git_diy ##############################
-git clone https://github.com/Hydrahail-Johnson/diy_scripts.git Hydra
-bash /jd/config/git_diy.sh Hydra
+#git clone https://github.com/Hydrahail-Johnson/diy_scripts.git Hydra
+#bash /jd/config/git_diy.sh Hydra
 
 ############################## 宠汪汪群助力 ##############################
 ##ls /jd/config/help_pet_run.sh && bash /jd/config/help_pet_run.sh || wget -O /jd/config/help_pet_run.sh http://47.100.61.159:81/help_pet_run.sh
