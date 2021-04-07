@@ -27,6 +27,8 @@ nevinee/jd:v4，nevinee/jd:v4-bot
 diy.sh下载地址：https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/diy.sh
 #### 方法2. 修改crontab.list 配合 git_diy.sh 【无需更新，推荐】
 a. 从网页上下载git_diy.sh，并存放在/jd/scripts文件夹；
+下载地址1【原作者】：https://raw.githubusercontent.com/sparkssssssss/scripts/main/git_diy.sh
+下载地址2【本人镜像】：https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/git_diy/git_diy.sh 
 b. 在crontab.list添加计划任务，根据自己实际情况添加，格式如下，
 */30 * * * *  bash /jd/scripts/git_diy.sh monk-coder dust i-chenzhe
 
