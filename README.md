@@ -26,7 +26,7 @@ nevinee/jd:v4，nevinee/jd:v4-bot
 **注意**：遇到问题别找我，自行探索
 
 ### 安装教程
-#### 方法1. 修改diy.sh 【更新不太及时，推荐小白使用】
+#### 方法1. 修改diy.sh 【更新不太及时，推荐小白使用，建议自行维护】
 从网页上复制diy.sh文件的内容，在web面板中替换自己原有的自定义任务后，保存修改。
 
 diy.sh下载地址：https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/diy.sh
@@ -38,7 +38,7 @@ a. 从网页上下载git_diy.sh，并存放在/jd/scripts文件夹；
 
 下载地址2【本人镜像】：https://raw.githubusercontent.com/Hydrahail-Johnson/diy_scripts/main/git_diy/git_diy.sh 
 
-b. 在crontab.list添加计划任务，根据自己实际情况添加，格式如下
+b. 在crontab.list添加计划任务，根据自己实际情况添加，格式如下：
 
 */30 * * * *  bash /jd/scripts/git_diy.sh monk-coder dust i-chenzhe
 
@@ -49,7 +49,7 @@ https://github.zjxnas.tk
 
 ## 参与贡献
 
-[qiaoqi](https://github.com/qiao112)
-[ktandykok](https://github.com/ktandykok)
-[XINZHOUZHANG](https://github.com/XINZHOUZHANG)
+[qiaoqi](https://github.com/qiao112)，
+[ktandykok](https://github.com/ktandykok)，
+[XINZHOUZHANG](https://github.com/XINZHOUZHANG)，
 [Nanase](https://github.com/jsyzdej)
