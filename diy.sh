@@ -8,7 +8,7 @@ done
 
 ##############################作者昵称（必填）##############################
 # 使用空格隔开
-author_list="jaindjh i-chenzhe normal Hydrahail-Johnson"
+author_list="jaindjh i-chenzhe normal Hydrahail-Johnson qq34347476"
 
 ##############################作者脚本地址URL（必填）##############################
 # 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
@@ -19,7 +19,7 @@ scripts_base_url_1=https://gitee.com/jiandjh/docker/raw/main/jd/
 scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/
 scripts_base_url_3=https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/normal/
 scripts_base_url_4=https://ghproxy.com/https://raw.githubusercontent.com/Hydrahail-Johnson/scripts/main/js/
-
+scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 
 ##############################作者脚本名称（必填）##############################
 # 将相应作者的脚本填写到以下变量中
@@ -28,6 +28,7 @@ jx_cfd.js m_get_inter_shop_sign.js xiaomi-step.js"
 my_scripts_list_2="z_carnivalcity.js z_entertainment.js z_fanslove.js z_getFanslove.js z_marketLottery.js z_mother_jump.js z_shake.js z_super5g.js"
 my_scripts_list_3="monk_inter_shop_sign.js monk_shop_follow_sku.js monk_shop_lottery.js monk_skyworth.js"
 my_scripts_list_4="jd_try.js jx_cfd_exchange.js"
+my_scripts_list_5="format_share_jd_code.js"
 
 
 ##############################随机函数##########################################
