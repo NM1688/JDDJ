@@ -46,10 +46,10 @@ rand(){
 
 
 
-cd $ScriptsDir
+#cd $ScriptsDir
 # 清理过期脚本
-rm -rf ZCY01_jd_try.js
-rm -rf i-chenzhe_jd_asus_iqiyi.js
+#rm -rf ZCY01_jd_try.js
+#rm -rf i-chenzhe_jd_asus_iqiyi.js
 
 # 下载脚本
 index=1
