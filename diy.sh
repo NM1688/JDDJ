@@ -14,7 +14,6 @@ author_list="jaindjh i-chenzhe normal Hydrahail-Johnson qq34347476 cui521 member
 # 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
 # 1.从作者库中随意挑选一个脚本地址，每个作者的地址添加一个即可，无须重复添加
 # 2.将地址最后的 “脚本名称+后缀” 剪切到下一个变量里（my_scripts_list_xxx）
-# scripts_base_url_1=https://gitee.com/qq34347476/quantumult-x/raw/master/
 scripts_base_url_1=https://gitee.com/jiandjh/docker/raw/main/jd/
 scripts_base_url_2=https://gitee.com/mumuba2020/dust/raw/dust/i-chenzhe/
 scripts_base_url_3=https://gitee.com/mumuba2020/dust/raw/dust/normal/
