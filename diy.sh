@@ -8,29 +8,24 @@ done
 
 ##############################作者昵称（必填）##############################
 # 使用空格隔开
-author_list="jaindjh i-chenzhe normal Hydrahail-Johnson qq34347476 cui521"
+author_list="jaindjh Hydrahail-Johnson qq34347476 cui521"
 
 ##############################作者脚本地址URL（必填）##############################
 # 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
 # 1.从作者库中随意挑选一个脚本地址，每个作者的地址添加一个即可，无须重复添加
 # 2.将地址最后的 “脚本名称+后缀” 剪切到下一个变量里（my_scripts_list_xxx）
-# scripts_base_url_1=https://gitee.com/qq34347476/quantumult-x/raw/master/
 scripts_base_url_1=https://gitee.com/jiandjh/docker/raw/main/jd/
-scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/
-scripts_base_url_3=https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/normal/
-scripts_base_url_4=https://ghproxy.com/https://raw.githubusercontent.com/Hydrahail-Johnson/scripts/main/js/
-scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
-scripts_base_url_6=https://ghproxy.com/https://raw.githubusercontent.com/cui521/jdqd/main/
+scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/Hydrahail-Johnson/scripts/main/js/
+scripts_base_url_3=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
+scripts_base_url_4=https://ghproxy.com/https://raw.githubusercontent.com/cui521/jdqd/main/
 
 ##############################作者脚本名称（必填）##############################
 # 将相应作者的脚本填写到以下变量中
 my_scripts_list_1="jd_back_carnivalcity.js jd_carnivalcity.js jd_cash.js jd_crazy_joy_collect.js jd_crazy_joy_compose.js jd_priceProtect.js jd_speed_redpocke.js 
 jx_cfd.js m_get_inter_shop_sign.js xiaomi-step.js monk_inter_shop_sign.js"
-my_scripts_list_2="z_carnivalcity.js z_entertainment.js z_fanslove.js z_getFanslove.js z_marketLottery.js z_mother_jump.js z_shake.js z_super5g.js"
-my_scripts_list_3="monk_inter_shop_sign.js monk_shop_follow_sku.js monk_shop_lottery.js monk_skyworth.js"
-my_scripts_list_4="jd_try.js jx_cfd_exchange.js"
-my_scripts_list_5="format_share_jd_code.js"
-my_scripts_list_6="DIY_shopsign.js"
+my_scripts_list_2="jd_try.js jx_cfd_exchange.js"
+my_scripts_list_3="format_share_jd_code.js"
+my_scripts_list_4="DIY_shopsign.js"
 
 
 ##############################随机函数##########################################
