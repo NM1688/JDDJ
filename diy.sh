@@ -8,7 +8,7 @@ done
 
 ##############################作者昵称（必填）##############################
 # 使用空格隔开
-author_list="jaindjh i-chenzhe normal Hydrahail-Johnson qq34347476 cui521 member rewrite"
+author_list="jaindjh i-chenzhe normal Hydrahail-Johnson qq34347476 cui521 member"
 
 ##############################作者脚本地址URL（必填）##############################
 # 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
@@ -22,7 +22,6 @@ scripts_base_url_4=https://ghproxy.com/https://raw.githubusercontent.com/Hydraha
 scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 scripts_base_url_6=https://ghproxy.com/https://raw.githubusercontent.com/cui521/jdqd/main/
 scripts_base_url_7=https://gitee.com/mumuba2020/dust/raw/dust/member/
-scripts_base_url_8=https://gitee.com/mumuba2020/dust/raw/dust/rewrite/
 
 ##############################作者脚本名称（必填）##############################
 # 将相应作者的脚本填写到以下变量中
@@ -34,7 +33,6 @@ my_scripts_list_4="jd_try.js jx_cfd_exchange.js"
 my_scripts_list_5="format_share_jd_code.js"
 my_scripts_list_6="DIY_shopsign.js"
 my_scripts_list_7="monk_pasture.js"
-my_scripts_list_8="m_get_inter_shop_sign.js m_get_shop_lottery.js"
 
 
 
