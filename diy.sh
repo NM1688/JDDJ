@@ -101,5 +101,3 @@ else
   rm -rf diy.sh.new
   echo -e "更新 diy.sh 失败，使用上一次正常的版本...\n"
 fi
-
-
