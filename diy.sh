@@ -26,7 +26,7 @@ scripts_base_url_7=https://gitee.com/mumuba2020/dust/raw/dust/member/
 # 将相应作者的脚本填写到以下变量中
 my_scripts_list_1="jd_back_carnivalcity.js jd_carnivalcity.js jd_cash.js jd_crazy_joy_collect.js jd_crazy_joy_compose.js jd_priceProtect.js jd_speed_redpocke.js 
 jx_cfd.js xiaomi-step.js monk_inter_shop_sign.js"
-my_scripts_list_2="z_carnivalcity.js z_entertainment.js z_fanslove.js z_getFanslove.js z_marketLottery.js z_mother_jump.js z_shake.js z_super5g.js"
+my_scripts_list_2="z_carnivalcity.js z_entertainment.js z_fanslove.js z_marketLottery.js z_mother_jump.js z_shake.js z_super5g.js"
 my_scripts_list_3="monk_inter_shop_sign.js monk_shop_follow_sku.js monk_shop_lottery.js monk_skyworth.js"
 my_scripts_list_4="jd_try.js jx_cfd_exchange.js"
 my_scripts_list_5="format_share_jd_code.js"
@@ -45,10 +45,10 @@ rand(){
 
 
 
-#cd $ScriptsDir
+cd $ScriptsDir
 # 清理过期脚本
-#rm -rf ZCY01_jd_try.js
-#rm -rf i-chenzhe_jd_asus_iqiyi.js
+rm -rf z_getFanslove.js
+rm -rf i-chenzhe_jd_asus_iqiyi.js
 
 # 下载脚本
 index=1
