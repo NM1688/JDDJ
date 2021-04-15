@@ -1,10 +1,4 @@
-#!/usr/bin/env bash
-#添加hosts;如无法正常下载Github Raw文件，请注释掉
-Host_IP=('151.101.88.133' '151.101.228.133')
-Host_Name=('raw.githubusercontent.com' 'raw.githubusercontent.com')
-for (( i=0; i<=${#Host_IP[@]}; i++ )) do
-echo "${Host_IP[$i]} ${Host_Name[$i]}" >> /etc/hosts
-done
+ #!/usr/bin/env bash
 
 ##############################作者昵称（必填）##############################
 # 使用空格隔开
@@ -33,8 +27,6 @@ my_scripts_list_5="format_share_jd_code.js"
 my_scripts_list_6="DIY_shopsign.js"
 my_scripts_list_7="monk_pasture.js"
 
-
-
 ##############################随机函数##########################################
 rand(){
     min=$1
@@ -44,47 +36,85 @@ rand(){
 }
 
 
-
-cd $ScriptsDir
-# 清理过期脚本
-rm -rf z_getFanslove.js
-rm -rf i-chenzhe_jd_asus_iqiyi.js
-
-# 下载脚本
+cd $ScriptsDir   # 在 git_pull.sh 中已经定义 ScriptsDir 此变量，diy.sh 由 git_pull.sh 调用，因此可以直接使用此变量
 index=1
+
 for author in $author_list
 do
-  echo -e "开始下载 $author 的脚本"
+  echo -e "####################开始下载 $author 的脚本####################"
   # 下载my_scripts_list中的每个js文件，重命名增加前缀"作者昵称_"，增加后缀".new"
   eval scripts_list=\$my_scripts_list_${index}
   echo $scripts_list
   eval url_list=\$scripts_base_url_${index}
-  echo $url_list
   for js in $scripts_list
   do
     eval url=$url_list$js
     echo $url
-    eval name=$author"_"$js
-    echo $name
-    wget -q --no-check-certificate $url -O $name.new
+    check_file=`ls|grep "$js"`
+    if [ ! $check_file ]; then
+      check_file="blank"
+    fi
+    existing_file_num=`echo "$check_file"|awk 'END{print NR}'`
+    if [[ "$existing_file_num" -eq "1" ]] && [ ${check_file} == ${js} ]; then
+      echo -e "库中已存在该脚本 $js ,将不进行任何操作"
+      continue
+    else
+      if [ ${check_file} == "blank" ]; then
+        eval name=$author"_"$js
+        echo $name"--发现新脚本"
+      else
+        for js_name in $check_file
+        do
+          if [ ${js_name} != ${js} ] && [[ "$existing_file_num" -gt "1" ]]; then
+            rm -f "$js_name"
+            echo -e "已删除一个重复的 $js 脚本"
+          else
+            eval name=$author"_"$js
+            echo $name"--只发现1个脚本，故继续保留作者前缀"
+          fi
+        done
+      fi
 
     # 如果上一步下载没问题，才去掉后缀".new"，如果上一步下载有问题，就保留之前正常下载的版本
-    # 查找脚本内cron关键字并添加到crontab.list
-    if [ $? -eq 0 ]; then
-      mv -f $name.new $name
-      echo -e "更新 $name 完成...\n"
-	  croname=`echo "$name"|awk -F\. '{print $1}'`
-	  script_date=`cat  $name|grep "http"|awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5}'|sort |uniq|head -n 1`
-	  if [ -z "${script_date}" ];then
-	    cron_min=$(rand 1 59)
-	    cron_hour=$(rand 7 9)
-	    [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname"  /jd/config/crontab.list
-	  else
-	    [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/hangup/a${script_date} bash jd $croname"  /jd/config/crontab.list
-	  fi
-    else
-      [ -f $name.new ] && rm -f $name.new
-      echo -e "更新 $name 失败，使用上一次正常的版本...\n"
+      if [ $? -eq 0 ]; then
+        mv -f $name.new $name
+        echo -e "更新 $name 完成..."
+	    croname=`echo "$name"|awk -F\. '{print $1}'`
+	    script_date=`cat  $name|grep "http"|awk '{if($1~/^[0-59]/) print $1,$2,$3,$4,$5}'|sort |uniq|head -n 1`
+	    [ -z "${script_date}" ] && script_date=`cat  $name|grep -Eo "([0-9]+|\*) ([0-9]+|\*) ([0-9]+|\*) ([0-9]+|\*) ([0-9]+|\*)"|sort |uniq|head -n 1`
+	    if [ -z "${script_date}" ]; then
+	      cron_min=$(rand 1 59)
+	      cron_hour=$(rand 7 9)
+	  	  [ $(grep -c "$croname" /jd/config/crontab.list) -eq 0 ] && sed -i "/hangup/a${cron_min} ${cron_hour} * * * bash jd $croname"  /jd/config/crontab.list
+	    else
+	      check_existing_cron=`grep -c "$croname" /jd/config/crontab.list`
+	      echo $check_existing_cron"准备添加cron"
+	      if [ "${check_existing_cron}" -eq 0 ]; then
+	        sed -i "/hangup/a${script_date} bash jd $croname"  /jd/config/crontab.list
+	        echo -e "已成功添加新cron...\n"
+	      else
+	        grep -v "$croname" /jd/config/crontab.list > output.txt
+		      mv -f output.txt /jd/config/crontab.list
+		      sed -i "/hangup/a${script_date} bash jd $croname"  /jd/config/crontab.list
+	        echo -e "已成功替换cron...\n"
+	      fi
+	    fi
+      else
+        [ -f $name.new ] && rm -f $name.new
+        echo -e "更新 $name 失败，使用上一次正常的版本...\n"
+        croname=`echo "$name"|awk -F\. '{print $1}'`
+        check_existing_cron=`grep -c "$croname" /jd/config/crontab.list`
+        if [ "${check_existing_cron}" -ne 0 ]; then
+          grep -v "$croname" /jd/config/crontab.list > output.txt
+          mv -f output.txt /jd/config/crontab.list
+          echo -e "已成功删除"$name"的crontablist\n"
+          rm ${name:-default}
+          echo -e "已成功删除"$name"的脚本文件\n"
+          cd $LogDir
+          rm -r ${croname:-default}
+          echo -e "已成功删除"$name"的log文件夹\n"
+        fi
+      fi
     fi
   done
   index=$[$index+1]
