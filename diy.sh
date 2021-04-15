@@ -2,7 +2,7 @@
 
 ##############################作者昵称（必填）##############################
 # 使用空格隔开
-author_list="jaindjh i-chenzhe normal Hydrahail-Johnson qq34347476 cui521 member"
+author_list="jiandjh i-chenzhe normal Hydrahail-Johnson qq34347476 cui521 member"
 
 ##############################作者脚本地址URL（必填）##############################
 # 例如：https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js
