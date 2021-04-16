@@ -28,7 +28,6 @@ jd_crazy_joy_collect.js
 jd_crazy_joy_compose.js
 jd_priceProtect.js
 jd_speed_redpocke.js
-jx_cfd.js
 xiaomi-step.js
 monk_inter_shop_sign.js
 
