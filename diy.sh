@@ -73,7 +73,7 @@ jx_cfd_exchange.js
 # 库地址:https://github.com/qq34347476/js_script
 scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
 my_scripts_list_5="
-member_monk_pasture.js
+getShareCode_format.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
