@@ -41,7 +41,6 @@ z_carnivalcity.js
 z_entertainment.js
 z_fanslove.js
 z_marketLottery.js
-z_mother_jump.js
 z_shake.js
 z_super5g.js
 
