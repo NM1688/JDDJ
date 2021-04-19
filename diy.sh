@@ -6,6 +6,18 @@
 #                                                                            #
 ##############################################################################
 
+##############################同步 diy.sh ##########################################
+cd $ConfigDir
+echo -e "开始更新 diy.sh "
+wget -q --no-check-certificate https://gitee.com/jiandjh/docker/raw/main/diy.sh -O diy.sh.new
+if [ $? -eq 0 ]; then
+  mv -f diy.sh.new diy.sh
+  echo -e "更新 diy.sh 完成"
+else
+  rm -rf diy.sh.new
+  echo -e "更新 diy.sh 失败，使用上一次正常的版本...\n"
+fi
+
 ############################## 作者名称 ##############################
 author_list="
 jiandjh
@@ -165,15 +177,3 @@ do
   done
   index=$[$index+1]
 done
-
-##############################同步 diy.sh ##########################################
-cd $ConfigDir
-echo -e "开始更新 diy.sh "
-wget -q --no-check-certificate https://gitee.com/jiandjh/docker/raw/main/diy.sh -O diy.sh.new
-if [ $? -eq 0 ]; then
-  mv -f diy.sh.new diy.sh
-  echo -e "更新 diy.sh 完成"
-else
-  rm -rf diy.sh.new
-  echo -e "更新 diy.sh 失败，使用上一次正常的版本...\n"
-fi
