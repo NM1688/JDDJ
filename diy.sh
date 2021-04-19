@@ -33,6 +33,7 @@ monk_inter_shop_sign.js
 jx_nc.js
 jx_factory.js
 jx_factory_component.js
+jx_products_detail.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
