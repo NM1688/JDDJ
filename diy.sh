@@ -11,7 +11,6 @@ author_list="
 jiandjh
 i-chenzhe
 normal
-Hydrahail-Johnson
 qq34347476
 member
 whyour
@@ -57,36 +56,29 @@ monk_shop_lottery.js
 monk_skyworth.js
 
 "
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-############################## 维护:Hydrahail-Johnson ##############################
-scripts_base_url_4=https://ghproxy.com/https://raw.githubusercontent.com/Hydrahail-Johnson/scripts/main/js/
-my_scripts_list_4="
-jd_try.js
-jx_cfd_exchange.js
-
-"
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ############################## 维护:qq34347476 ##############################
 # 库地址:https://github.com/qq34347476/js_script
-scripts_base_url_5=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
-my_scripts_list_5="
+scripts_base_url_4=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
+my_scripts_list_4="
 getShareCode_format.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ############################## 维护:member ##############################
-scripts_base_url_6=https://gitee.com/mumuba2020/dust/raw/dust/member/
-my_scripts_list_6="
+scripts_base_url_5=https://gitee.com/mumuba2020/dust/raw/dust/member/
+my_scripts_list_5="
 monk_pasture.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-############################## 维护:member ##############################
-scripts_base_url_7=https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/
-my_scripts_list_7="
+
+############################## 维护:whyour ##############################
+scripts_base_url_6=https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/
+my_scripts_list_6="
 jx_nc.js
 jx_factory.js
 jx_factory_component.js
