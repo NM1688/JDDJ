@@ -40,7 +40,7 @@ if (!$.isNode()) {
       $.shareCodeObj.DreamFactory = getCodes("MyDreamFactory", data);
       $.shareCodeObj.JdFactory = getCodes("MyJdFactory", data);
       $.shareCodeObj.Sgmh = getCodes("MySgmh", data);
-      $.shareCodeObj.Jdcfd = getCodes("MyJdcfd", data);
+      $.shareCodeObj.Jdcfd = getCodes("Mycfd", data);
       $.shareCodeObj.Cash = getCodes("MyCash", data);
       $.shareCodeObj.Joy = getCodes("MyJoy", data);
       $.shareCodeObj.Jdzz = getCodes("MyJdzz", data);
