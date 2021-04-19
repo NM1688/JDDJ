@@ -30,6 +30,7 @@ jd_priceProtect.js
 jd_speed_redpocke.js
 xiaomi-step.js
 monk_inter_shop_sign.js
+jx_nc.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
