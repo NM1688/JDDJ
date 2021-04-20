@@ -33,7 +33,6 @@ whyour
 ############################## 维护:jiandjh ##############################
 scripts_base_url_1=https://gitee.com/jiandjh/docker/raw/main/jd/
 my_scripts_list_1="
-jd_carnivalcity.js
 jd_cash.js
 jd_crazy_joy_collect.js
 jd_crazy_joy_compose.js
