@@ -1,20 +1,3 @@
-/*
-小米运动
-
-更新地址：https://raw.githubusercontent.com/ljhnchina/jd_script/main/xiaomi-step.js
-============Quantumultx===============
-[task_local]
-#小米运动
-0 16 * * * https://raw.githubusercontent.com/ljhnchina/jd_script/main/xiaomi-step.js, tag=小米运动,  enabled=true
-================Loon==============
-[Script]
-cron "0 16 * * *" script-path=https://raw.githubusercontent.com/ljhnchina/jd_script/main/xiaomi-step.js,tag=小米运动
-===============Surge=================
-小米运动 = type=cron,cronexp="0 16 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/ljhnchina/jd_script/main/xiaomi-step.js
-============小火箭=========
-小米运动 = type=cron,script-path=https://raw.githubusercontent.com/ljhnchina/jd_script/main/xiaomi-step.js, cronexpr="0 16 * * *", timeout=3600, enable=true
-*/
-
 const axios = require('axios')
 const qs = require('qs')
 const notify = require('./sendNotify');
