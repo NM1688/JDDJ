@@ -2,7 +2,7 @@
 
 ##############################################################################
 #                                                                            #
-#                              2021年4月19日 21:02:11
+#                              2021年4月23日 21:58:18
 #                                                                            #
 ##############################################################################
 
@@ -37,7 +37,6 @@ jd_cash.js
 jd_crazy_joy_collect.js
 jd_crazy_joy_compose.js
 jd_priceProtect.js
-jd_speed_redpocke.js
 xiaomi-step.js
 monk_inter_shop_sign.js
 
@@ -48,11 +47,8 @@ monk_inter_shop_sign.js
 scripts_base_url_2=https://gitee.com/mumuba2020/dust/raw/dust/i-chenzhe/
 my_scripts_list_2="
 z_carnivalcity.js
-z_entertainment.js
 z_fanslove.js
 z_marketLottery.js
-z_shake.js
-z_super5g.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
