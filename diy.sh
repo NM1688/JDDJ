@@ -39,7 +39,6 @@ jd_crazy_joy_compose.js
 jd_priceProtect.js
 xiaomi-step.js
 monk_inter_shop_sign.js
-jd_tcl.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
