@@ -89,7 +89,6 @@ jx_nc.js
 jx_factory.js
 jx_factory_component.js
 jx_products_detail.js
-jx_tokens.js
 
 "
 
