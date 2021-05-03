@@ -44,6 +44,7 @@ jd_try.js
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ############################## 维护:i-chenzhe ##############################
+#库地址:https://gitee.com/mumuba2020/dust.git
 scripts_base_url_2=https://gitee.com/mumuba2020/dust/raw/dust/i-chenzhe/
 my_scripts_list_2="
 z_fanslove.js
@@ -56,6 +57,7 @@ z_health_energy.js
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ############################## 维护:normal ##############################
+#库地址:https://gitee.com/mumuba2020/dust.git
 scripts_base_url_3=https://gitee.com/mumuba2020/dust/raw/dust/normal/
 my_scripts_list_3="
 monk_inter_shop_sign.js
@@ -76,6 +78,7 @@ getShareCode_format.js
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ############################## 维护:member ##############################
+#库地址:https://gitee.com/mumuba2020/dust.git
 scripts_base_url_5=https://gitee.com/mumuba2020/dust/raw/dust/member/
 my_scripts_list_5="
 monk_pasture.js
