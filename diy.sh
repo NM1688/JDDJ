@@ -48,6 +48,9 @@ scripts_base_url_2=https://gitee.com/mumuba2020/dust/raw/dust/i-chenzhe/
 my_scripts_list_2="
 z_fanslove.js
 z_marketLottery.js
+z_health_community.js
+z_health_energy.js
+
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
