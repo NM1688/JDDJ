@@ -46,7 +46,6 @@ jd_try.js
 ############################## 维护:i-chenzhe ##############################
 scripts_base_url_2=https://gitee.com/mumuba2020/dust/raw/dust/i-chenzhe/
 my_scripts_list_2="
-z_carnivalcity.js
 z_fanslove.js
 z_marketLottery.js
 
@@ -59,7 +58,6 @@ my_scripts_list_3="
 monk_inter_shop_sign.js
 monk_shop_follow_sku.js
 monk_shop_lottery.js
-monk_skyworth.js
 
 "
 
