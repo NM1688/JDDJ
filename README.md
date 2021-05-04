@@ -26,7 +26,7 @@ nevinee/jd:v4，nevinee/jd:v4-bot
 **注意**：遇到问题别找我，自行探索
 
 ## 安装教程
-### V3
+### V3 DOCKER
 #### 方法1. 修改diy.sh 【更新不太及时，推荐小白使用，建议自行维护】
 从网页上复制diy.sh文件的内容，在web面板中替换自己原有的自定义任务后，保存修改。
 
@@ -43,8 +43,11 @@ b. 在crontab.list添加计划任务，根据自己实际情况添加，格式�
 
 */30 * * * *  bash /jd/scripts/git_diy.sh monk-coder dust i-chenzhe
 
-### V4
+### V4 DOCKER
 修改config.sh，按照说明添加即可
+
+### 教程合集
+[我的博客](https://blog.zjxnas.top)中有大量完整的教程，想要折腾可以自行查阅，请勿骚扰
 
 ## 参与贡献
 
