@@ -36,7 +36,7 @@ jd_crazy_joy_compose.js
 jd_priceProtect.js
 monk_inter_shop_sign.js
 jd_try.js
-adolf_haier.js
+adolf_oppo.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
