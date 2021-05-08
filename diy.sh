@@ -2,7 +2,7 @@
 
 ##############################################################################
 #                                                                            #
-#                              2021年5月3日 20:51:14
+#                              2021年5月8日 19:23:17
 #                                                                            #
 ##############################################################################
 
@@ -21,8 +21,6 @@ fi
 ############################## 作者名称 ##############################
 author_list="
 jiandjh
-i-chenzhe
-normal
 qq34347476
 member
 whyour
@@ -41,31 +39,6 @@ monk_inter_shop_sign.js
 jd_try.js
 
 "
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-############################## 维护:i-chenzhe ##############################
-#库地址:https://gitee.com/mumuba2020/dust.git
-scripts_base_url_2=https://gitee.com/mumuba2020/dust/raw/dust/i-chenzhe/
-my_scripts_list_2="
-z_fanslove.js
-z_marketLottery.js
-z_health_community.js
-z_health_energy.js
-
-
-"
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-############################## 维护:normal ##############################
-#库地址:https://gitee.com/mumuba2020/dust.git
-scripts_base_url_3=https://gitee.com/mumuba2020/dust/raw/dust/normal/
-my_scripts_list_3="
-monk_inter_shop_sign.js
-monk_shop_follow_sku.js
-monk_shop_lottery.js
-
-"
-
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ############################## 维护:qq34347476 ##############################
