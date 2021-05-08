@@ -22,7 +22,6 @@ fi
 author_list="
 jiandjh
 qq34347476
-member
 whyour
 
 "
@@ -43,25 +42,16 @@ jd_try.js
 
 ############################## 维护:qq34347476 ##############################
 # 库地址:https://github.com/qq34347476/js_script
-scripts_base_url_4=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
-my_scripts_list_4="
+scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
+my_scripts_list_2="
 getShareCode_format.js
 
 "
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-############################## 维护:member ##############################
-#库地址:https://gitee.com/mumuba2020/dust.git
-scripts_base_url_5=https://gitee.com/mumuba2020/dust/raw/dust/member/
-my_scripts_list_5="
-monk_pasture.js
-
-"
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 ############################## 维护:whyour ##############################
-scripts_base_url_6=https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/
-my_scripts_list_6="
+scripts_base_url_3=https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/
+my_scripts_list_3="
 jx_nc.js
 jx_factory.js
 jx_factory_component.js
