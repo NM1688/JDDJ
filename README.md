@@ -137,7 +137,7 @@ docker run -d \
 
 #青龙更新命令
 ```
-docker exec -it qinglong bash git_pull
+docker exec -it qinglong ql update
 ```
 #v4更新命令
 ```
