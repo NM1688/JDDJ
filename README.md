@@ -171,7 +171,7 @@ cd panel
 npm i
 pm2 start server.js
 ```
-#和尚大佬的库v4拉取方法
+#v4拉取第三方方法
 ```
 OwnRepoUrl1="https://ghproxy.com/https://github.com/monk-coder/dust"
 OwnRepoUrl2="https://ghproxy.com/https://github.com/monk-coder/dust"
