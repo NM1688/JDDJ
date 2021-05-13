@@ -1,51 +1,65 @@
 /*
+https://github.com/nevinee/jd_shell 专版
+
+详细配置使用说明 查看 https://github.com/qq34347476/js_script/wiki/format_share_jd_code
+
+注意位置脚本会 替换 两个 # format_share_jd_code 中间部分所有内容
+
 只支持nodejs
 
-#格式化提交互助码
-55 23 * * * https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/submit_codes.js, tag=格式化提交互助码, img-url=https://raw.githubusercontent.com/yogayyy/task/master/huzhucode.png, enabled=true
+#获取互助码并格式化/docker自动更新容器下所有账号互助码
+55 23 * * * https://gitee.com/qq34347476/quantumult-x/raw/master/format_share_jd_code.js, tag=获取互助码并格式化/docker自动更新容器下所有账号互助码, img-url=https://raw.githubusercontent.com/yogayyy/task/master/huzhucode.png, enabled=true
 
  */
-const $ = new Env("格式化提交互助码");
+const $ = new Env("获取互助码并格式化/docker自动更新容器下所有账号互助码");
 const notifyMsg = `
-通用格式机器人版本\n
+https://github.com/nevinee/jd_shell 专版补充
 \n
-新手写脚本难免有BUG，做好配置备份`;
+新手写脚本难免有BUG，做好配置备份
+有问题随时git留言
+详细配置请参考 https://github.com/qq34347476/js_script/wiki/format_share_jd_code\n`;
 const notify = $.isNode() ? require("./sendNotify") : "";
 const fs = require("fs");
 const path = require("path");
 $.shareCodeObj = {};
 $.exportStr = "";
 
-let fsjd_notify_control = true;
+let fsjd_notify_control = true
 
 if (!$.isNode()) {
   console.log("不是nodejs环境");
 } else {
   if (process.env.FSJD_NOTIFY_CONTROL === "true") {
-    fsjd_notify_control = false;
+    fsjd_notify_control = false
   }
 
+  let filePath = path.resolve(__dirname, "../log/export_sharecodes");
+  let readDir = fs.readdirSync(filePath).reverse();
+  let fileName;
 
-  let file = path.resolve(__dirname, "../config/config.sh");
+  if (readDir && readDir.length > 0) {
+    fileName = readDir[0];
+  } else {
+    console.log("没有生成日志，请手动运行 bash export_sharecodes.sh");
+  }
 
   // 读取日志
+  let file = path.resolve(__dirname, filePath, fileName);
   fs.readFile(file, "utf-8", function (err, data) {
     if (err) {
       console.error(err);
     } else {
-      console.log("读取成功");
-      $.shareCodeObj.Bean = getCodes("MyBean", data);
-      $.shareCodeObj.Fruit = getCodes("MyFruit", data);
-      $.shareCodeObj.Pet = getCodes("MyPet", data);
-      $.shareCodeObj.DreamFactory = getCodes("MyDreamFactory", data);
-      $.shareCodeObj.JdFactory = getCodes("MyJdFactory", data);
-      $.shareCodeObj.Sgmh = getCodes("MySgmh", data);
-      $.shareCodeObj.Jdcfd = getCodes("MyJdcfd", data);
-      $.shareCodeObj.Cash = getCodes("MyCash", data);
-      $.shareCodeObj.Joy = getCodes("MyJoy", data);
-      $.shareCodeObj.Jdzz = getCodes("MyJdzz", data);
+      console.log("读取log文件成功");
+      let reg = /(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+(：|[a-zA-Z]+：)/g;
+      let newStr = data
+      const nameArr = data.match(reg);
+      console.log(`检测到有以下活动互助码【${nameArr}】`);
 
-      showFormatMsg($.shareCodeObj);
+      nameArr.forEach(item => {
+        newStr = newStr.replace(item, "#" + item);
+      })
+
+      exportLog(newStr);
 
       // 判断是否通知
       // if (fsjd_notify_control) {
@@ -55,106 +69,32 @@ if (!$.isNode()) {
   });
 }
 
-const getCodes = (name,data) => {
-      const reg = new RegExp(`(${name}\\d+=)([A-Za-z0-9=\\-_{}:"',]+)`, "gim");
-      let arr = data.match(reg)
-      if(!arr) {
-        return
+// 替换 config.sh 内容
+const exportLog = (str) => {
+  const fs = require("fs");
+  const path = require("path");
+  let file = path.resolve(__dirname, "../config/config.sh");
+
+  fs.readFile(file, "utf-8", function (err, data) {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log("读取config.sh文件成功");
+      let dataArr = data.split("# format_share_jd_code");
+      if (dataArr.length > 1) {
+        dataArr.splice(1, 1, str);
+        str = dataArr.join("# format_share_jd_code");
+
+        fs.writeFile(file, str, { encoding: "utf8" }, (err) => {
+          console.log(err);
+        });
+        console.log("更新互助码配置成功");
+      } else {
+        console.log("未进行互助码配置");
       }
-      let str = arr.join("★");
-      str = str.replace(reg, "$2");
-      arr = str.split("★");
-      return arr.map(item => {
-        return item.slice(1,-1)
-      })
-}
-
-function showFormatMsg(shareCodeObj) {
-  console.log(
-    `\n========== 【格式化互助码只留随机4-5个(一定有第一个)】 ==========`
-  );
-  console.log(`\n提交机器人 @Turing Lab Bot\n`);
-  shareCodeObj.Bean &&
-    console.log(
-      `/submit_activity_codes bean ${getRandomArrayElements(
-        shareCodeObj.Bean
-      ).join("&")}\n`
-    );
-  shareCodeObj.Fruit &&
-    console.log(
-      `/submit_activity_codes farm ${getRandomArrayElements(
-        shareCodeObj.Fruit
-      ).join("&")}\n`
-    );
-  shareCodeObj.Pet &&
-    console.log(
-      `/submit_activity_codes pet ${getRandomArrayElements(
-        shareCodeObj.Pet
-      ).join("&")}\n`
-    );
-  shareCodeObj.DreamFactory &&
-    console.log(
-      `/submit_activity_codes jxfactory ${getRandomArrayElements(
-        shareCodeObj.DreamFactory
-      ).join("&")}\n`
-    );
-  shareCodeObj.JdFactory &&
-    console.log(
-      `/submit_activity_codes ddfactory ${getRandomArrayElements(
-        shareCodeObj.JdFactory
-      ).join("&")}\n`
-    );
-  // 临时活动
-  shareCodeObj.Sgmh &&
-    console.log(
-      `/submit_activity_codes sgmh ${getRandomArrayElements(
-        shareCodeObj.Sgmh
-      ).join("&")}\n`
-    );
-  shareCodeObj.Jdcfd &&
-    console.log(
-      `/submit_activity_codes jxcfd ${getRandomArrayElements(
-        shareCodeObj.Jdcfd
-      ).join("&")}\n`
-    );
-
-  console.log(`\n提交机器人 @Commit Code Bot\n`);
-  shareCodeObj.Cash &&
-    console.log(
-      `/jdcash ${getRandomArrayElements(shareCodeObj.Cash).join("&")}\n`
-    );
-  shareCodeObj.Joy &&
-    console.log(
-      `/jdcrazyjoy ${getRandomArrayElements(shareCodeObj.Joy).join("&")}\n`
-    );
-
-  shareCodeObj.Jdzz &&
-    console.log(
-      `/jdzz ${getRandomArrayElements(shareCodeObj.Jdzz).join("&")}\n`
-    );
-}
-
-// 随机区 数组中的 几个元素， 必有 第一个元素
-function getRandomArrayElements(arr = [], count = 4) {
-  if (arr.length <= 5) {
-    return arr;
-  } else {
-    let shuffled = arr.slice(0),
-      i = arr.length,
-      min = i - count,
-      temp,
-      index;
-    while (i-- > min) {
-      index = Math.floor((i + 1) * Math.random());
-      temp = shuffled[index];
-      shuffled[index] = shuffled[i];
-      shuffled[i] = temp;
     }
-    const res = [arr[0], ...shuffled.slice(min)];
-    return [...new Set(res)];
-  }
-}
-
+  });
+};
 
 const showMsg = (notifyMsg) => {
   if ($.isNode()) {
