@@ -23,7 +23,7 @@ nevinee/jd:gitee，noobx/jd:py，noobx/jd:gitee，whyour/qinglong:latest
 V4镜像：
 nevinee/jd:v4，nevinee/jd:v4-bot
 
-**注意**：遇到问题别找我，自行探索
+**注意**：遇到问题别PR，请自行探索
 
 ## 安装教程
 ### V3 DOCKER
