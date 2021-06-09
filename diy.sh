@@ -2,7 +2,7 @@
 
 ##############################################################################
 #                                                                            #
-#                              2021年5月8日 23:11:30
+#                              2021年6月9日 12:22:18
 #                                                                            #
 ##############################################################################
 
@@ -21,7 +21,6 @@ fi
 ############################## 作者名称 ##############################
 author_list="
 jiandjh
-qq34347476
 whyour
 
 "
@@ -38,22 +37,15 @@ monk_inter_shop_sign.js
 jd_try.js
 adolf_oppo.js
 adolf_haier.js
-
-"
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-############################## 维护:qq34347476 ##############################
-# 库地址:https://github.com/qq34347476/js_script
-scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/qq34347476/js_script/master/scripts/
-my_scripts_list_2="
 getShareCode_format.js
 
 "
+
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ############################## 维护:whyour ##############################
-scripts_base_url_3=https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/
-my_scripts_list_3="
+scripts_base_url_2=https://ghproxy.com/https://raw.githubusercontent.com/whyour/hundun/master/quanx/
+my_scripts_list_2="
 jx_nc.js
 jx_factory.js
 jx_factory_component.js
