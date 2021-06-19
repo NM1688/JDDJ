@@ -1,7 +1,7 @@
 name: sync
 on:
   schedule:
-    - cron: '*/60 * * * *'
+    - cron: '1 0,15 * * *'
   workflow_dispatch:
   watch:
     types: started
@@ -21,7 +21,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync 
+      - name: sync JDDJ
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
@@ -29,6 +29,126 @@ jobs:
           source_branch: "main"
           destination_branch: "master"
           github_token: ${{ secrets.PAT }}
+      - name: sync free
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/freefq/free.git"
+          source_branch: "master"
+          destination_branch: "freefq-free"
+          github_token: ${{ secrets.PAT }}
+      - name: sync JDMemberCloseAccount
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/yqchilde/JDMemberCloseAccount.git"
+          source_branch: "main"
+          destination_branch: "yqchilde-JDMemberCloseAccount"
+          github_token: ${{ secrets.PAT }}
+      - name: sync daily_scripts
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/ZCY01/daily_scripts.git"
+          source_branch: "main"
+          destination_branch: "ZCY01-daily_scripts"
+          github_token: ${{ secrets.PAT }}
+      - name: sync longzhuzhu
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/longzhuzhu/nianyu.git"
+          source_branch: "main"
+          destination_branch: "longzhuzhu-nianyu"
+          github_token: ${{ secrets.PAT }}
+      - name: sync jd_scripts
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/chinnkarahoi/jd_scripts.git"
+          source_branch: "master"
+          destination_branch: "jd_scripts"
+          github_token: ${{ secrets.PAT }}
+      - name: sync jd-scripts-docker
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/chinnkarahoi/jd-scripts-docker.git"
+          source_branch: "master"
+          destination_branch: "docker"
+          github_token: ${{ secrets.PAT }}
+      - name: sync jd-scripts
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/JDHelloWorld/jd_scripts.git"
+          source_branch: "main"
+          destination_branch: "JDHelloWorld-jd_scripts"
+          github_token: ${{ secrets.PAT }}
+      - name: sync jd
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/star261/jd.git"
+          source_branch: "main"
+          destination_branch: "star261-jd"
+          github_token: ${{ secrets.PAT }}
+      - name: sync jd
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/zooPanda/zoo.git"
+          source_branch: "dev"
+          destination_branch: "zooPanda-zoo"
+          github_token: ${{ secrets.PAT }}
+      - name: sync qinglong
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/whyour/qinglong.git"
+          source_branch: "master"
+          destination_branch: "qinglong"
+          github_token: ${{ secrets.PAT }}
+      - name: sync JDBrandMember
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/AntonVanke/JDBrandMember.git"
+          source_branch: "main"
+          destination_branch: "AntonVanke-JDBrandMember"
+          github_token: ${{ secrets.PAT }}
+      - name: sync dailycheckin
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/Sitoi/dailycheckin.git"
+          source_branch: "main"
+          destination_branch: "Sitoi-dailycheckin"
+          github_token: ${{ secrets.PAT }}
+      - name: sync jd-base
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/dockere/jd-base.git"
+          source_branch: "main"
+          destination_branch: "jd-base"
+          github_token: ${{ secrets.PAT }}
+      - name: sync js_script
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/qq34347476/js_script.git"
+          source_branch: "master"
+          destination_branch: "js_script"
+          github_token: ${{ secrets.PAT }} 
+      - name: sync jiandjh-docker
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://gitee.com/jiandjh/docker.git"
+          source_branch: "main"
+          destination_branch: "jiandjh-docker"
+          github_token: ${{ secrets.PAT }}   
       # 我自己同步到gitee使用，其他人可忽略
       - name: sync github -> gitee
         uses: Yikun/hub-mirror-action@master
