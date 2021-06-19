@@ -129,8 +129,8 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/dockere/jd-base.git"
-          source_branch: "main"
+          source_repo: "https://github.com/lxrcbw/jd-base_dockere.git"
+          source_branch: "master"
           destination_branch: "jd-base"
           github_token: ${{ secrets.PAT }}
       - name: sync js_script
