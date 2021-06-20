@@ -186,7 +186,7 @@ jobs:
         if: env.PAT
         with:
           source_repo: "https://github.com/wuzhi04/MyActions.git"
-          source_branch: "mian"
+          source_branch: "main"
           destination_branch: "wuzhi"
           github_token: ${{ secrets.PAT }}
       - name: sync elecV2P
