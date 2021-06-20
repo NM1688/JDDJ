@@ -93,7 +93,7 @@ jobs:
           source_branch: "main"
           destination_branch: "star261-jd"
           github_token: ${{ secrets.PAT }}
-      - name: sync jd
+      - name: sync ZOO
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
@@ -148,6 +148,75 @@ jobs:
           source_repo: "https://gitee.com/jiandjh/docker.git"
           source_branch: "main"
           destination_branch: "jiandjh-docker"
+          github_token: ${{ secrets.PAT }}
+      - name: sync dust
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/Wpenga/dust.git"
+          source_branch: "main"
+          destination_branch: "heshang-dust"
+          github_token: ${{ secrets.PAT }}
+      - name: sync dd
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/piaoyun/dd.git"
+          source_branch: "mian"
+          destination_branch: "v4panel"
+          github_token: ${{ secrets.PAT }}
+      - name: sync NobyDa
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/NobyDa/Script.git"
+          source_branch: "master"
+          destination_branch: "NobyDa"
+          github_token: ${{ secrets.PAT }}
+      - name: sync yangtingxiao
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/yangtingxiao/QuantumultX.git"
+          source_branch: "master"
+          destination_branch: "yangtingxiao-QuantumultX"
+      - name: sync wuzhi
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/wuzhi04/MyActions.git"
+          source_branch: "mian"
+          destination_branch: "wuzhi"
+          github_token: ${{ secrets.PAT }}
+      - name: sync elecV2P
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/elecV2/elecV2P.git"
+          source_branch: "master"
+          destination_branch: "elecV2P"
+          github_token: ${{ secrets.PAT }}
+      - name: sync elecV2P
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/elecV2/elecV2P.git"
+          source_branch: "master"
+          destination_branch: "elecV2P"
+      - name: sync curtinlv
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/curtinlv/JD-Script.git"
+          source_branch: "main"
+          destination_branch: "curtinlv-JD"
+      - name: sync hundun
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/whyour/hundun.git"
+          source_branch: "master"
+          destination_branch: "hundun"   
           github_token: ${{ secrets.PAT }}   
       # 我自己同步到gitee使用，其他人可忽略
       - name: sync github -> gitee
