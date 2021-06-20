@@ -204,6 +204,7 @@ jobs:
           source_repo: "https://github.com/curtinlv/JD-Script.git"
           source_branch: "main"
           destination_branch: "curtinlv-JD"
+          github_token: ${{ secrets.PAT }}  
       - name: sync hundun
         uses: repo-sync/github-sync@v2
         if: env.PAT
