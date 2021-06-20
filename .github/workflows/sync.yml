@@ -180,6 +180,7 @@ jobs:
           source_repo: "https://github.com/yangtingxiao/QuantumultX.git"
           source_branch: "master"
           destination_branch: "yangtingxiao-QuantumultX"
+          github_token: ${{ secrets.PAT }}
       - name: sync wuzhi
         uses: repo-sync/github-sync@v2
         if: env.PAT
