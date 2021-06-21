@@ -212,7 +212,30 @@ jobs:
           source_repo: "https://github.com/whyour/hundun.git"
           source_branch: "master"
           destination_branch: "hundun"   
-          github_token: ${{ secrets.PAT }}   
+          github_token: ${{ secrets.PAT }}
+      - name: sync JDC
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/cdlaimin/JDC.git"
+          source_branch: "master"
+          destination_branch: "JDC"   
+          github_token: ${{ secrets.PAT }}
+      - name: sync ssh
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/FunctionClub/Fail2ban.git"
+          source_branch: "master"
+          destination_branch: "fail2ban"
+      - name: sync WeHalo
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/aquanlerou/WeHalo.git"
+          source_branch: "main"
+          destination_branch: "WeHalo"   
+          github_token: ${{ secrets.PAT }}     
       # 我自己同步到gitee使用，其他人可忽略
       - name: sync github -> gitee
         uses: Yikun/hub-mirror-action@master
