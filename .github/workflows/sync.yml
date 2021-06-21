@@ -250,7 +250,7 @@ jobs:
         if: env.PAT
         with:
           source_repo: "https://github.com/lan-tianxiang/jd_shell.git"
-          source_branch: "V3"
+          source_branch: "v3"
           destination_branch: "V3"   
           github_token: ${{ secrets.PAT }}    
       # 我自己同步到gitee使用，其他人可忽略
