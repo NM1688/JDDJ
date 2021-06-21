@@ -228,6 +228,7 @@ jobs:
           source_repo: "https://github.com/FunctionClub/Fail2ban.git"
           source_branch: "master"
           destination_branch: "fail2ban"
+          github_token: ${{ secrets.PAT }}
       - name: sync WeHalo
         uses: repo-sync/github-sync@v2
         if: env.PAT
@@ -235,7 +236,23 @@ jobs:
           source_repo: "https://github.com/aquanlerou/WeHalo.git"
           source_branch: "main"
           destination_branch: "WeHalo"   
-          github_token: ${{ secrets.PAT }}     
+          github_token: ${{ secrets.PAT }}
+      - name: sync js_tool
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/lan-tianxiang/js_tool.git"
+          source_branch: "A1"
+          destination_branch: "js_tool"   
+          github_token: ${{ secrets.PAT }}
+      - name: sync V3
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/lan-tianxiang/jd_shell.git"
+          source_branch: "V3"
+          destination_branch: "V3"   
+          github_token: ${{ secrets.PAT }}    
       # 我自己同步到gitee使用，其他人可忽略
       - name: sync github -> gitee
         uses: Yikun/hub-mirror-action@master
