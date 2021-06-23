@@ -260,7 +260,23 @@ jobs:
           source_repo: "https://github.com/Hydrahail-Johnson/scripts.git"
           source_branch: "main"
           destination_branch: "Hydrahail-Johnson"   
-          github_token: ${{ secrets.PAT }}     
+          github_token: ${{ secrets.PAT }}
+      - name: sync ningmeng
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/panghu999/jd_scripts.git"
+          source_branch: "master"
+          destination_branch: "ningmeng"   
+          github_token: ${{ secrets.PAT }}
+      - name: sync lx0301
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/panghu999/jd_scripts.git"
+          source_branch: "master"
+          destination_branch: "lx0301备份"   
+          github_token: ${{ secrets.PAT }}    
       # 我自己同步到gitee使用，其他人可忽略
       - name: sync github -> gitee
         uses: Yikun/hub-mirror-action@master
