@@ -23,7 +23,7 @@ jobs:
 
       - name: sync JDDJ
         uses: repo-sync/github-sync@v2
-        if: env.AC
+        if: env.PTA
         with:
           source_repo: "https://github.com/passerby-b/JDDJ.git"
           source_branch: "main"
