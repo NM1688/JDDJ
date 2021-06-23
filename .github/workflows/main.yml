@@ -284,6 +284,6 @@ jobs:
         with:
           src: github/NM1688
           dst: gitee/NM1688
-          static_list: "JDDJ"
+          static_list: "collection"
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
