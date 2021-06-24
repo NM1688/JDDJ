@@ -23,7 +23,7 @@ jobs:
 
       - name: sync JDDJ
         uses: repo-sync/github-sync@v2
-        if: env.PTA
+        if: env.AC
         with:
           source_repo: "https://github.com/passerby-b/JDDJ.git"
           source_branch: "main"
@@ -44,7 +44,7 @@ jobs:
           source_repo: "https://github.com/yqchilde/JDMemberCloseAccount.git"
           source_branch: "main"
           destination_branch: "yqchilde-JDMemberCloseAccount"
-          github_token: ${{ secrets.AC }}
+          github_token: ${{ secrets.PAT }}
       - name: sync daily_scripts
         uses: repo-sync/github-sync@v2
         if: env.PAT
@@ -52,7 +52,7 @@ jobs:
           source_repo: "https://github.com/ZCY01/daily_scripts.git"
           source_branch: "main"
           destination_branch: "ZCY01-daily_scripts"
-          github_token: ${{ secrets.AC }}
+          github_token: ${{ secrets.PAT }}
       - name: sync longzhuzhu
         uses: repo-sync/github-sync@v2
         if: env.PAT
@@ -60,7 +60,7 @@ jobs:
           source_repo: "https://github.com/longzhuzhu/nianyu.git"
           source_branch: "main"
           destination_branch: "longzhuzhu-nianyu"
-          github_token: ${{ secrets.AC }}
+          github_token: ${{ secrets.PAT }}
       - name: sync jd_scripts
         uses: repo-sync/github-sync@v2
         if: env.PAT
