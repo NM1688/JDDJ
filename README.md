@@ -51,7 +51,7 @@
 
 5、如不想用我的库，阻止主库更新后，当脚本报错缺少依赖时，依次执行以下3条命令，默认容器名jd_v4_bot，如做了修改，按实际修改命令。
 
-  (前提scripts文件夹里得有package.json和package-lock.json，没有就去scripts.tar.gz里找)
+  (前提scripts文件夹里得有package.json，没有就去上面scripts.tar.gz里找)
 
     docker exec -it jd_v4_bot bash
     cd scripts
