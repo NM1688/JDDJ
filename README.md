@@ -50,11 +50,11 @@
 
  （先进入容器，参考第2条。再依次执行以下3条命令。）
 
-  apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev
+    apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev
 
-  cd scripts
+    cd scripts
 
-  npm install canvas --build-from-source
+    npm install canvas --build-from-source
 
 
 
