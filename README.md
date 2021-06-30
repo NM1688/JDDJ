@@ -14,7 +14,7 @@
       -p 5678:5678 \
       -e ENABLE_HANGUP=true \
       -e ENABLE_WEB_PANEL=true \
-      -e ENABLE_WEB_TTYD=true \
+      -e ENABLE_WEB_TTYD=false \
       --name jd_v4_bot \
       --hostname jd_v4_bot \
       --restart always \
