@@ -38,12 +38,6 @@
  
     wget -q https://raw.githubusercontent.com/Annyoo2021/jd_v4_bot/main/v4mb.sh -O v4mb.sh && chmod +x v4mb.sh && ./v4mb.sh
  
- 
-
-3.1、此面板集成了ttyd，不要安装，待修改。
-更新或重装面板 (切记先要进入容器再执行)，执行以下命令后，请使用旧密码进行访问面板。
-
-    wget -q https://raw.githubusercontent.com/Annyoo2021/jd_v4_bot/main/v4mb_up.sh -O v4mb_up.sh && chmod +x v4mb_up.sh && ./v4mb_up.sh
 
 
 
