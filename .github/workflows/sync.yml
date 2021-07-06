@@ -95,7 +95,7 @@ jobs:
           github_token: ${{ secrets.AC }}
       - name: sync ZOO
         uses: repo-sync/github-sync@v2
-        if: env.PAT
+        if: env.AC
         with:
           source_repo: "https://github.com/zooPanda/zoo.git"
           source_branch: "dev"
