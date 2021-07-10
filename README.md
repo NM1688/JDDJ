@@ -60,5 +60,5 @@
   (前提scripts文件夹里得有package.json，没有就去我scripts库里找)
 
     docker exec -it jd_v4_bot bash
-    cd scripts
-    npm install
+    cd scripts && npm install
+    
