@@ -30,7 +30,6 @@
 
 2、安装v4_bot(arm64) 一键命令（1）
 
-  同上
   
     docker run -dit \
       -v /jd_v4_bot/config:/jd/config \
