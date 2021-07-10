@@ -51,6 +51,7 @@
  （依次执行以下命令，默认容器名jd_v4_bot，如做了修改，按实际修改命令。）
 
     docker exec -it jd_v4_bot bash
+    
     cd scripts && npm install png-js
 
 
@@ -60,5 +61,6 @@
   (前提scripts文件夹里得有package.json，没有就去我scripts库里找)
 
     docker exec -it jd_v4_bot bash
+    
     cd scripts && npm install
     
