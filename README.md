@@ -30,6 +30,7 @@
 
 2、安装v4_bot(arm64) 一键命令（1）
 
+  (强烈建议：自行修改本地宿主机端口，即修改左边的5678。)
   
     docker run -dit \
       -v /jd_v4_bot/config:/jd/config \
