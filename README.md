@@ -46,15 +46,12 @@
 
 
 
-4、镜像默认用我的库作为主库，三方库自行添加。装好更新后，安装新版宠汪汪的依赖：
+4、镜像默认用我的库作为主库，三方库自行添加。装好更新后，安装某些脚本所需依赖：
 
- （先进入容器，参考第2条。再依次执行以下3条命令。）
+ （依次执行以下命令，默认容器名jd_v4_bot，如做了修改，按实际修改命令。）
 
-    apk add --no-cache build-base g++ cairo-dev pango-dev giflib-dev
-
-    cd scripts
-
-    npm install canvas --build-from-source
+    docker exec -it jd_v4_bot bash
+    cd scripts && npm install png-js
 
 
 
