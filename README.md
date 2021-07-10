@@ -30,9 +30,7 @@
 
 2、安装v4_bot(arm64) 一键命令（1）
 
-  (如是群晖用户，提前在docker下新建文件夹jd_v4_bot，下面再新建config，log，own，diy，scripts五个文件夹，左边路径改为实际的绝对路径。)
-  
-  (强烈建议：自行修改本地宿主机端口，即修改左边的5678。)
+  同上
   
     docker run -dit \
       -v /jd_v4_bot/config:/jd/config \
