@@ -1,7 +1,7 @@
 #依次运行以下命令，安装jd_v4_bot和面板。
 
 
-1、安装v4_bot(x86) 一键命令（1）
+1、安装v4_bot (x86) 一键命令（1）
 
   (如是群晖用户，提前在docker下新建文件夹jd_v4_bot，下面再新建config，log，own，diy，scripts五个文件夹，左边路径改为实际的绝对路径。)
   
@@ -23,12 +23,12 @@
 
 
 
-1.1、安装v4_bot(x86) 一键命令（2）
+1.1、安装v4_bot (x86) 一键命令（2）
 
     wget -q https://raw.githubusercontent.com/Annyoo2021/jd_v4_bot/main/jd-docker.sh -O jd-docker.sh && chmod +x jd-docker.sh && ./jd-docker.sh
 
 
-2、安装v4_bot(arm64) 一键命令（1）
+2、安装v4_bot (arm64) 一键命令（1）
 
   (强烈建议：自行修改本地宿主机端口，即修改左边的5678。)
   
@@ -48,7 +48,7 @@
 
 
 
-2.1、安装v4_bot(arm64) 一键命令（2）
+2.1、安装v4_bot (arm64) 一键命令（2）
 
     wget -q https://raw.githubusercontent.com/Annyoo2021/jd_v4_bot/main/jd-docker_0.sh -O jd-docker_0.sh && chmod +x jd-docker_0.sh && ./jd-docker_0.sh
 
