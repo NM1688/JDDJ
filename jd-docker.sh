@@ -35,11 +35,11 @@ DEL_CONTAINER=true
 INSTALL_WATCH=false
 TEST_BEAN_CHAGE=false
 ENABLE_WEB_PANEL=true
-ENABLE_HANGUP=false
+ENABLE_HANGUP=true
 OLD_IMAGE_ID=""
 MOUNT_SCRIPT=""
 MAPPING_PORT=""
-ENABLE_HANGUP_ENV="--env ENABLE_HANGUP=false"
+ENABLE_HANGUP_ENV="--env ENABLE_HANGUP=true"
 ENABLE_BOT_ENV="--env ENABLE_TG_BOT=true"
 
 
@@ -163,7 +163,7 @@ if [ "$net" = "2" ]; then
 fi
 
 
-inp "是否在启动容器时自动启动挂机程序：\n1) 关闭[默认]\n2) 开启"
+inp "是否在启动容器时自动启动挂机程序：\n1) 开启[默认]\n2) 关闭"
 echo -n -e "\e[36m输入您的选择->\e[0m"
 read hang_s
 if [ "$hang_s" = "2" ]; then
