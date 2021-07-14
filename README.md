@@ -14,7 +14,7 @@
       -v /jd_v4_bot/diy:/jd/jbot/diy \
       -v /jd_v4_bot/scripts:/jd/scripts \
       -p 5678:5678 \
-      -e ENABLE_HANGUP=false \
+      -e ENABLE_HANGUP=true \
       -e ENABLE_WEB_PANEL=true \
       --name jd_v4_bot \
       --hostname jd_v4_bot \
