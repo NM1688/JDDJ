@@ -68,7 +68,6 @@
    （强烈建议：仅本地使用面板。）
  
     wget -q https://raw.githubusercontent.com/Annyoo2021/jd_v4_bot/main/v4mb.sh -O v4mb.sh && chmod +x v4mb.sh && ./v4mb.sh
- 
 
 
 
