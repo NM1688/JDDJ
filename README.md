@@ -14,7 +14,8 @@
       -v /jd_v4_bot/diy:/jd/jbot/diy \
       -v /jd_v4_bot/scripts:/jd/scripts \
       -p 5678:5678 \
-      -e ENABLE_HANGUP=true \
+      -e ENABLE_HANGUP=false \
+      -e ENABLE_WEB_TTYD=false \
       -e ENABLE_WEB_PANEL=true \
       -e ENABLE_TG_BOT=true \
       --name jd_v4_bot \
@@ -41,6 +42,7 @@
       -v /jd_v4_bot/scripts:/jd/scripts \
       -p 5678:5678 \
       -e ENABLE_HANGUP=false \
+      -e ENABLE_WEB_TTYD=false \
       -e ENABLE_WEB_PANEL=true \
       -e ENABLE_TG_BOT=true \
       --name jd_v4_bot \
