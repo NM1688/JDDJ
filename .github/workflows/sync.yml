@@ -93,13 +93,13 @@ jobs:
           source_branch: "main"
           destination_branch: "star261-jd"
           github_token: ${{ secrets.AC }}
-      - name: sync oot
+      - name: sync buqian
         uses: repo-sync/github-sync@v2
         if: env.AC
         with:
-          source_repo: "https://gist.github.com/fzls/14f8d1d3ebb2fef64750ad91d268e4f6.git"
-          source_branch: "dev"
-          destination_branch: "oot"
+          source_repo: "https://github.com/buqian123/faker3"
+          source_branch: "main"
+          destination_branch: "buqian"
           github_token: ${{ secrets.AC }}
       - name: sync qinglong
         uses: repo-sync/github-sync@v2
