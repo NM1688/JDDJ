@@ -1,0 +1,92 @@
+name: jihe4
+on:
+  schedule:
+    - cron: '0 13,23 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  push:
+    branches: [ master ]
+  repository_dispatch:
+    types: jihe4
+jobs:
+  repo-sync:
+    env:
+      AC: ${{ secrets.AC }}
+      dst_key: ${{ secrets.GITEE_PRIVATE_KEY }} # 我自己同步到gitee使用，其他人可忽略
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: sync Oreomeow
+        uses: repo-sync/github-sync@v2
+        if: env.AC
+        with:
+          source_repo: "https://github.com/Oreomeow/VIP/tree/main/Scripts.git"
+          source_branch: "main"
+          destination_branch: "Oreomeow_VIP"
+          github_token: ${{ secrets.AC }}
+          
+      - name: sync KingRan
+        uses: repo-sync/github-sync@v2
+        if: env.AC
+        with:
+          source_repo: "https://github.com/KingRan/JDJB.git"
+          source_branch: "main"
+          destination_branch: "KingRan"
+          github_token: ${{ secrets.AC }}
+      - name: sync zhulichi
+        uses: repo-sync/github-sync@v2
+        if: env.AC
+        with:
+          source_repo: "https://github.com/q398044828/xxoo_share_pool.git"
+          source_branch: "main"
+          destination_branch: "zhulichi"
+          github_token: ${{ secrets.AC }} 
+      - name: sync yilai
+        uses: repo-sync/github-sync@v2
+        if: env.AC
+        with:
+          source_repo: "https://github.com/FlechazoPh/QLDependency.git"
+          source_branch: "main"
+          destination_branch: "yilai"
+          github_token: ${{ secrets.AC }}
+      - name: sync wuye999
+        uses: repo-sync/github-sync@v2
+        if: env.AC
+        with:
+          source_repo: "https://github.com/wuye999/myScripts.git"
+          source_branch: "main"
+          destination_branch: "wuye999"
+          github_token: ${{ secrets.AC }}
+      - name: sync Annyoo2021
+        uses: repo-sync/github-sync@v2
+        if: env.AC
+        with:
+          source_repo: "https://github.com/Annyoo2021/jd_v4_bot.git"
+          source_branch: "main"
+          destination_branch: "v4_bot"
+          github_token: ${{ secrets.AC }}
+      - name: sync qqbot
+        uses: repo-sync/github-sync@v2
+        if: env.AC
+        with:
+          source_repo: "https://github.com/asupc/qqbot.git"
+          source_branch: "master"
+          destination_branch: "qqbot"
+          github_token: ${{ secrets.AC }}
+   
+          
+          
+          # 我自己同步到gitee使用，其他人可忽略
+      - name: sync github -> gitee
+        uses: Yikun/hub-mirror-action@master
+        if: env.dst_key
+        with:
+          src: github/NM1688
+          dst: gitee/NM1688
+          static_list: "JDDJ"
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
