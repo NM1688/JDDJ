@@ -1,4 +1,4 @@
-name: sync
+name: jihe2
 on:
   schedule:
     - cron: '1 1,16 * * *'
@@ -8,7 +8,7 @@ on:
   push:
     branches: [ master ]
   repository_dispatch:
-    types: sync
+    types: jihe2
 jobs:
   repo-sync:
     env:
