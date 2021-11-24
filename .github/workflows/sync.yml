@@ -93,7 +93,7 @@ jobs:
           source_branch: "main"
           destination_branch: "star261-jd"
           github_token: ${{ secrets.AC }}
-      - name: sync ZOO
+      - name: sync oot
         uses: repo-sync/github-sync@v2
         if: env.AC
         with:
