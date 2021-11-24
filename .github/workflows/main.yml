@@ -56,16 +56,7 @@ jobs:
           source_branch: "master"
           destination_branch: "js_script"
           github_token: ${{ secrets.AC }}
-          
-      - name: sync jiandjh-docker
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://gitee.com/jiandjh/docker.git"
-          source_branch: "main"
-          destination_branch: "jiandjh-docker"
-          github_token: ${{ secrets.AC }}
-          
+           
       - name: sync dust
         uses: repo-sync/github-sync@v2
         if: env.AC
@@ -106,7 +97,7 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.AC
         with:
-          source_repo: "https://github.com/wuzhi04/MyActions.git"
+          source_repo: "https://github.com/wuzhi05/MyActions.git"
           source_branch: "main"
           destination_branch: "wuzhi"
           github_token: ${{ secrets.AC }}
@@ -120,103 +111,6 @@ jobs:
           destination_branch: "elecV2P"
           github_token: ${{ secrets.AC }}
           
-      - name: sync curtinlv
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/curtinlv/JD-Script.git"
-          source_branch: "main"
-          destination_branch: "curtinlv-JD"
-          github_token: ${{ secrets.AC }} 
-          
-      - name: sync hundun
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/whyour/hundun.git"
-          source_branch: "master"
-          destination_branch: "hundun"   
-          github_token: ${{ secrets.AC }}
-          
-      - name: sync JDC
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/cdlaimin/JDC.git"
-          source_branch: "master"
-          destination_branch: "JDC"   
-          github_token: ${{ secrets.AC }}
-          
-      - name: sync ssh
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/FunctionClub/Fail2ban.git"
-          source_branch: "master"
-          destination_branch: "fail2ban"
-          github_token: ${{ secrets.AC }}
-          
-      - name: sync WeHalo
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/aquanlerou/WeHalo.git"
-          source_branch: "main"
-          destination_branch: "WeHalo"   
-          github_token: ${{ secrets.AC }}
-          
-      - name: sync js_tool
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/lan-tianxiang/js_tool.git"
-          source_branch: "A1"
-          destination_branch: "js_tool"   
-          github_token: ${{ secrets.AC }}
-          
-      - name: sync V3
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/lan-tianxiang/jd_shell.git"
-          source_branch: "v3"
-          destination_branch: "V3"   
-          github_token: ${{ secrets.AC }}
-          
-      - name: sync Hydrahail-Johnson
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/Hydrahail-Johnson/scripts.git"
-          source_branch: "main"
-          destination_branch: "Hydrahail-Johnson"   
-          github_token: ${{ secrets.AC }}
-          
-      - name: sync ningmeng
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/panghu999/jd_scripts.git"
-          source_branch: "master"
-          destination_branch: "ningmeng"   
-          github_token: ${{ secrets.AC }}
-      - name: sync lx0301
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/panghu999/jd_scripts.git"
-          source_branch: "master"
-          destination_branch: "lx0301备份"   
-          github_token: ${{ secrets.AC }}
-          
-      - name: sync jd
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/jiulan/jd_v4.git"
-          source_branch: "main"
-          destination_branch: "jdv4"   
-          github_token: ${{ secrets.AC }}
           
       # 我自己同步到gitee使用，其他人可忽略
       - name: sync github -> gitee
