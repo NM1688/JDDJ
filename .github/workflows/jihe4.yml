@@ -77,7 +77,14 @@ jobs:
           source_branch: "master"
           destination_branch: "qqbot"
           github_token: ${{ secrets.AC }}
-   
+      - name: sync nolanjdc
+        uses: repo-sync/github-sync@v2
+        if: env.AC
+        with:
+          source_repo: "https://github.com/NolanHzy/nvjdcdocker.git"
+          source_branch: "main"
+          destination_branch: "nljdc"
+          github_token: ${{ secrets.AC }}
           
           
           # 我自己同步到gitee使用，其他人可忽略
