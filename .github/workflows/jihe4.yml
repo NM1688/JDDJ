@@ -20,14 +20,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
-      - name: sync Oreomeow
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/Oreomeow/VIP/tree/main/Scripts.git"
-          source_branch: "main"
-          destination_branch: "Oreomeow_VIP"
-          github_token: ${{ secrets.AC }}
+      #- name: sync Oreomeow
+       # uses: repo-sync/github-sync@v2
+        #if: env.AC
+        #with:
+          #source_repo: "https://github.com/Oreomeow/VIP/tree/main/Scripts.git"
+          #source_branch: "main"
+          #destination_branch: "Oreomeow_VIP"
+          #github_token: ${{ secrets.AC }}
           
       - name: sync KingRan
         uses: repo-sync/github-sync@v2
