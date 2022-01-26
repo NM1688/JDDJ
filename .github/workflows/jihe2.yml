@@ -75,15 +75,6 @@ jobs:
           destination_branch: "V3"   
           github_token: ${{ secrets.AC }}
           
-      - name: sync Hydrahail-Johnson
-        uses: repo-sync/github-sync@v2
-        if: env.AC
-        with:
-          source_repo: "https://github.com/Hydrahail-Johnson/scripts.git"
-          source_branch: "main"
-          destination_branch: "Hydrahail-Johnson"   
-          github_token: ${{ secrets.AC }}
-                    
       - name: sync jd
         uses: repo-sync/github-sync@v2
         if: env.AC
